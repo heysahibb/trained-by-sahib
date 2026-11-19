@@ -15,39 +15,18 @@ body{font-family:Arial,Helvetica,sans-serif;color:#111827;background:#fff;line-h
 header{padding:14px 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(255,255,255,0.98);z-index:20}
 .brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy);letter-spacing:1.5px;font-size:15px}
 .brand img{width:58px;height:42px;object-fit:contain}
-nav a{margin:0 12px;text-decoration:none;color:#374151;font-size:14px;font-weight:600;transition:0.2s}
-nav a:hover{color:var(--navy)}
+nav a{margin:0 12px;text-decoration:none;color:#374151;font-size:14px;font-weight:600}
 .header-actions{display:flex;align-items:center;gap:10px}
-.cart-btn{position:relative;background:#fff;border:1.5px solid var(--navy);color:var(--navy);padding:9px 13px;border-radius:4px;cursor:pointer;font-weight:bold;font-size:13px;display:inline-flex;align-items:center;gap:6px;transition:0.2s}
-.cart-btn:hover{background:#f4f6fa}
+.cart-btn{background:#fff;border:1.5px solid var(--navy);color:var(--navy);padding:9px 13px;border-radius:4px;cursor:pointer;font-weight:bold;font-size:13px;display:inline-flex;align-items:center;gap:6px}
 .cart-count{background:var(--navy);color:#fff;font-size:11px;padding:2px 6px;border-radius:10px}
-.btn{display:inline-block;background:var(--navy);color:#fff;padding:13px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;letter-spacing:0.5px;border:none;cursor:pointer;transition:transform 0.25s ease, background 0.25s ease}
-.btn:hover{background:var(--navy-dark);transform:translateY(-2px)}
-.btn-outline{display:inline-block;border:2px solid var(--navy);color:var(--navy);padding:12px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;transition:transform 0.25s ease, background 0.25s ease}
-.btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+.btn{display:inline-block;background:var(--navy);color:#fff;padding:13px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;letter-spacing:0.5px;border:none;cursor:pointer}
+.btn:hover{background:var(--navy-dark)}
+.btn-outline{display:inline-block;border:2px solid var(--navy);color:var(--navy);padding:12px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px}
 
-/* Safe Entrance & Scroll Animations */
-@keyframes fadeUp{
-  0%{opacity:0;transform:translateY(28px)}
-  100%{opacity:1;transform:translateY(0)}
-}
-@keyframes fadeScale{
-  0%{opacity:0;transform:scale(0.96) translateY(18px)}
-  100%{opacity:1;transform:scale(1) translateY(0)}
-}
-.hero-anim-1{animation:fadeUp 0.65s ease-out both}
-.hero-anim-2{animation:fadeUp 0.75s ease-out 0.12s both}
-.hero-anim-3{animation:fadeUp 0.75s ease-out 0.24s both}
-.hero-anim-4{animation:fadeUp 0.75s ease-out 0.36s both}
-.hero-card-anim{animation:fadeScale 0.85s ease-out 0.2s both}
+@keyframes fadeUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
+.hero-anim{animation:fadeUp 0.75s ease-out both}
 
-.reveal{opacity:1;transform:translateY(0);transition:opacity 0.65s ease-out, transform 0.65s ease-out}
-.js-ready .reveal{opacity:0;transform:translateY(26px)}
-.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
-.delay-1{transition-delay:0.1s}
-.delay-2{transition-delay:0.2s}
-
-.hero{padding:75px 7%;display:grid;grid-template-columns:1.15fr 0.85fr;gap:45px;align-items:center;background:linear-gradient(115deg,#fff 62%,#f4f6fa 62%)}
+.hero{padding:70px 7%;display:grid;grid-template-columns:1.15fr 0.85fr;gap:45px;align-items:center;background:linear-gradient(115deg,#fff 62%,#f4f6fa 62%)}
 .tag{color:var(--navy);font-size:12px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase}
 h1{font-size:clamp(38px,6vw,66px);line-height:1.08;margin:16px 0;font-weight:900}
 h1 span{color:var(--navy)}
@@ -59,30 +38,25 @@ h1 span{color:var(--navy)}
 .stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid var(--border)}
 .stats strong{display:block;color:var(--navy);font-size:22px;font-weight:900}
 .stats small{color:#6b7280;font-size:12px}
-section{padding:75px 7%}
+section{padding:70px 7%}
 .bg-grey{background:var(--grey)}
-.heading{margin-bottom:40px;max-width:680px}
+.heading{margin-bottom:38px;max-width:680px}
 .heading h2{font-size:clamp(28px,4.5vw,44px);line-height:1.15;margin:10px 0;font-weight:900}
 .heading p{color:#4b5563;font-size:16px}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
 .check-list{list-style:none}
-.check-list li{padding:14px 18px;background:#fff;border:1px solid var(--border);border-radius:6px;margin-bottom:12px;font-weight:600;color:#1f2937;display:flex;align-items:center;gap:12px;transition:transform 0.25s ease}
-.check-list li:hover{transform:translateX(6px)}
+.check-list li{padding:14px 18px;background:#fff;border:1px solid var(--border);border-radius:6px;margin-bottom:12px;font-weight:600;color:#1f2937;display:flex;align-items:center;gap:12px}
 .check-icon{background:var(--navy);color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{padding:30px;border:1px solid var(--border);background:#fff;border-radius:6px;transition:transform 0.3s ease, box-shadow 0.3s ease}
-.card:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(16,26,59,0.08)}
+.card{padding:30px;border:1px solid var(--border);background:#fff;border-radius:6px}
 .card small{color:var(--navy);font-weight:bold;letter-spacing:2px;font-size:11px}
 .card h3{margin:14px 0 10px;font-size:21px}
 .card p{color:#4b5563;font-size:14px}
 .for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.for-item{padding:20px;border:1px solid var(--border);background:var(--grey);border-radius:6px;font-weight:bold;color:var(--navy);font-size:15px;transition:transform 0.25s ease}
-.for-item:hover{transform:translateY(-4px)}
+.for-item{padding:20px;border:1px solid var(--border);background:var(--grey);border-radius:6px;font-weight:bold;color:var(--navy);font-size:15px}
 .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.plan{padding:34px 28px;border:1px solid var(--border);background:#fff;border-radius:8px;display:flex;flex-direction:column;justify-content:space-between;transition:transform 0.3s ease, box-shadow 0.3s ease}
-.plan:hover{transform:translateY(-8px);box-shadow:0 16px 32px rgba(16,26,59,0.1)}
-.plan.popular{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-6px);box-shadow:0 16px 35px rgba(16,26,59,0.18)}
-.plan.popular:hover{transform:translateY(-12px)}
+.plan{padding:34px 28px;border:1px solid var(--border);background:#fff;border-radius:8px;display:flex;flex-direction:column;justify-content:space-between}
+.plan.popular{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 16px 35px rgba(16,26,59,0.18)}
 .plan small{color:var(--navy);font-weight:bold;letter-spacing:2px;font-size:11px}
 .plan.popular small{color:#93c5fd}
 .plan h3{font-size:24px;margin:10px 0}
@@ -106,25 +80,23 @@ details p{margin-top:10px;color:#4b5563;font-size:14px}
 .cta p{color:#d1d5db;margin-bottom:26px;max-width:560px;margin-left:auto;margin-right:auto}
 .white-btn{background:#fff;color:var(--navy)}
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.contact div{padding:28px;border:1px solid var(--border);border-radius:6px;transition:transform 0.25s ease}
-.contact div:hover{transform:translateY(-4px)}
+.contact div{padding:28px;border:1px solid var(--border);border-radius:6px}
 .contact small{color:var(--navy);font-weight:bold;letter-spacing:2px;font-size:11px}
 .contact h3{margin:8px 0;font-size:22px}
 .contact a{color:var(--navy);font-weight:bold;text-decoration:none;font-size:16px}
 footer{text-align:center;padding:28px 5%;background:var(--grey);color:#4b5563;font-size:13px;border-top:1px solid var(--border)}
 
-/* Cart Drawer Styles */
-.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;z-index:50}
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);display:none;z-index:50}
 .cart-overlay.open{display:block}
-.cart-drawer{position:fixed;top:0;right:-400px;width:100%;max-width:380px;height:100%;background:#fff;z-index:60;box-shadow:-8px 0 30px rgba(0,0,0,0.15);display:flex;flex-direction:column;transition:0.3s}
+.cart-drawer{position:fixed;top:0;right:-100%;width:100%;max-width:380px;height:100%;background:#fff;z-index:60;box-shadow:-8px 0 30px rgba(0,0,0,0.2);display:flex;flex-direction:column;transition:right 0.3s ease}
 .cart-drawer.open{right:0}
 .cart-head{padding:20px;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center}
 .cart-head h3{font-size:18px;letter-spacing:1px}
-.close-cart{background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.close-cart{background:none;border:none;color:#fff;font-size:26px;cursor:pointer;line-height:1}
 .cart-body{padding:20px;flex:1;overflow-y:auto}
 .cart-item{display:flex;justify-content:space-between;align-items:center;padding:14px;border:1px solid var(--border);border-radius:6px;margin-bottom:12px}
 .cart-item strong{display:block;color:var(--navy)}
-.remove-btn{background:#fee2e2;color:#b91c1c;border:none;padding:5px 10px;border-radius:4px;cursor:pointer;font-size:12px;font-weight:bold}
+.remove-btn{background:#fee2e2;color:#b91c1c;border:none;padding:6px 10px;border-radius:4px;cursor:pointer;font-size:12px;font-weight:bold}
 .cart-input{width:100%;padding:11px;border:1px solid var(--border);border-radius:4px;margin-top:8px;margin-bottom:12px;font-size:14px}
 .cart-foot{padding:20px;border-top:1px solid var(--border);background:var(--grey)}
 .cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:900;color:var(--navy);margin-bottom:14px}
@@ -135,7 +107,6 @@ nav{display:none}
 .brand span{font-size:13px}
 .hero,.split,.grid-3,.for-grid,.pricing,.contact{grid-template-columns:1fr}
 .hero{padding:45px 6%;background:#fff}
-.plan.popular{transform:none}
 section{padding:55px 6%}
 }
 </style>
@@ -157,16 +128,16 @@ section{padding:55px 6%}
 <a href="#contact">Contact</a>
 </nav>
 <div class="header-actions">
-<button class="cart-btn" onclick="toggleCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+<button type="button" class="cart-btn" id="openCartBtn">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
 <a class="btn" href="#pricing" style="padding:10px 15px;font-size:13px">JOIN</a>
 </div>
 </header>
 
-<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-overlay" id="cartOverlay"></div>
 <div class="cart-drawer" id="cartDrawer">
 <div class="cart-head">
 <h3>YOUR CART</h3>
-<button class="close-cart" onclick="toggleCart()">×</button>
+<button type="button" class="close-cart" id="closeCartBtn">×</button>
 </div>
 <div class="cart-body" id="cartBody">
 <p style="color:#6b7280;text-align:center;margin-top:40px">No plans in the cart yet.<br>Select a coaching plan to get started.</p>
@@ -175,27 +146,27 @@ section{padding:55px 6%}
 <div class="cart-total"><span>Total:</span><span id="cartTotal">₹0</span></div>
 <input type="text" id="clientName" class="cart-input" placeholder="Your Full Name">
 <input type="text" id="clientGoal" class="cart-input" placeholder="Your Goal (Fat Loss / Muscle / Powerlifting)">
-<button class="btn" style="width:100%" onclick="checkoutWhatsApp()">PROCEED TO WHATSAPP →</button>
+<button type="button" class="btn" style="width:100%" id="checkoutBtn">PROCEED TO WHATSAPP →</button>
 </div>
 </div>
 
 <main>
-<div class="hero">
+<div class="hero hero-anim">
 <div>
-<div class="tag hero-anim-1">PERSONAL TRAINING • POWERLIFTING • NUTRITION</div>
-<h1 class="hero-anim-2">START YOUR <span>FITNESS JOURNEY,</span> THE RIGHT WAY.</h1>
-<p class="hero-anim-3">Get a workout plan and diet guidance made specifically for your body and goals. With personal guidance from Sahib and regular WhatsApp check-ins, stay consistent and build real strength.</p>
-<div class="hero-btns hero-anim-3">
+<div class="tag">PERSONAL TRAINING • POWERLIFTING • NUTRITION</div>
+<h1>START YOUR <span>FITNESS JOURNEY,</span> THE RIGHT WAY.</h1>
+<p>Get a workout plan and diet guidance made specifically for your body and goals. With personal guidance from Sahib and regular WhatsApp check-ins, stay consistent and build real strength.</p>
+<div class="hero-btns">
 <a class="btn" href="#pricing">CHOOSE YOUR PLAN →</a>
 <a class="btn-outline" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20know%20more%20about%20coaching.">TALK ON WHATSAPP</a>
 </div>
-<div class="stats hero-anim-4">
+<div class="stats">
 <div><strong>5+ Years</strong><small>Powerlifting Experience</small></div>
 <div><strong>1-on-1</strong><small>Personal Guidance</small></div>
 <div><strong>Online + Jhansi</strong><small>Coaching Available</small></div>
 </div>
 </div>
-<div class="logo-card hero-card-anim">
+<div class="logo-card">
 <img src="Logo.png" alt="TRAINED BY SAHIB">
 <p>Structured Training • Practical Nutrition • Real Results</p>
 </div>
@@ -203,14 +174,14 @@ section{padding:55px 6%}
 
 <section id="why" class="bg-grey">
 <div class="split">
-<div class="reveal">
+<div>
 <div class="tag">YOUR GOALS. A PLAN MADE FOR YOU.</div>
 <h2 style="font-size:clamp(28px,4vw,42px);line-height:1.15;margin:12px 0 18px;font-weight:900">WHY CHOOSE COACHING WITH SAHIB?</h2>
 <p style="color:#4b5563;margin-bottom:16px">Everyone has different fitness goals—fat loss, muscle building, or getting stronger. Knowing what to train, what to eat, and how to stay consistent shouldn't be guesswork.</p>
 <p style="color:#4b5563;margin-bottom:24px">With <strong>TRAINED BY SAHIB</strong>, you get a clear, step-by-step system designed around your lifestyle, routine, and experience level.</p>
 <a class="btn" href="#pricing">GET PERSONAL COACHING →</a>
 </div>
-<div class="reveal delay-1">
+<div>
 <ul class="check-list">
 <li><span class="check-icon">✓</span> Direct Personal Guidance from Sahib</li>
 <li><span class="check-icon">✓</span> Custom Workout Plan Made for Your Body</li>
@@ -223,23 +194,23 @@ section{padding:55px 6%}
 </section>
 
 <section id="features">
-<div class="heading reveal">
+<div class="heading">
 <div class="tag">WHAT YOU GET</div>
 <h2>EVERYTHING YOU NEED TO WORK TOWARDS YOUR GOALS.</h2>
 <p>No copy-paste templates. Every plan is structured around your progress.</p>
 </div>
 <div class="grid-3">
-<div class="card reveal">
+<div class="card">
 <small>01 / TRAINING</small>
 <h3>Custom Workout Plan</h3>
 <p>Get a structured workout routine made according to your fitness goals, experience level, and available gym or home equipment—focused on muscle building, fat loss, or powerlifting strength.</p>
 </div>
-<div class="card reveal delay-1">
+<div class="card">
 <small>02 / NUTRITION</small>
 <h3>Diet & Supplement Guide</h3>
 <p>Simple, sustainable diet plans built around everyday Indian foods you actually enjoy eating, along with clear guidance on which supplements are worth taking.</p>
 </div>
-<div class="card reveal delay-2">
+<div class="card">
 <small>03 / ACCOUNTABILITY</small>
 <h3>Weekly Check-ins & Support</h3>
 <p>Stay connected on WhatsApp with weekly progress check-ins, form reviews, plan adjustments, and direct support whenever you feel stuck.</p>
@@ -248,29 +219,29 @@ section{padding:55px 6%}
 </section>
 
 <section class="bg-grey">
-<div class="heading reveal">
+<div class="heading">
 <div class="tag">IS THIS FOR YOU?</div>
 <h2>WHO IS THIS COACHING PROGRAM FOR?</h2>
 <p>Designed for anyone serious about transforming their physique and strength.</p>
 </div>
 <div class="for-grid">
-<div class="for-item reveal">✓ Anyone Wanting to Build Lean Muscle</div>
-<div class="for-item reveal delay-1">✓ Anyone Looking for Sustainable Fat Loss</div>
-<div class="for-item reveal delay-2">✓ Beginners Starting Their Fitness Journey</div>
-<div class="for-item reveal">✓ Lifters Improving Squat, Bench & Deadlift</div>
-<div class="for-item reveal delay-1">✓ Anyone Confused About Workouts & Diet</div>
-<div class="for-item reveal delay-2">✓ Busy Individuals Needing Accountability</div>
+<div class="for-item">✓ Anyone Wanting to Build Lean Muscle</div>
+<div class="for-item">✓ Anyone Looking for Sustainable Fat Loss</div>
+<div class="for-item">✓ Beginners Starting Their Fitness Journey</div>
+<div class="for-item">✓ Lifters Improving Squat, Bench & Deadlift</div>
+<div class="for-item">✓ Anyone Confused About Workouts & Diet</div>
+<div class="for-item">✓ Busy Individuals Needing Accountability</div>
 </div>
 </section>
 
 <section id="pricing">
-<div class="heading reveal">
+<div class="heading">
 <div class="tag">CHOOSE YOUR PLAN</div>
 <h2>INVEST IN YOUR STRENGTH.</h2>
 <p>Add your preferred coaching plan to cart and checkout directly.</p>
 </div>
 <div class="pricing">
-<div class="plan reveal">
+<div class="plan">
 <div>
 <small>STARTER</small>
 <h3>1 Month Plan</h3>
@@ -282,10 +253,10 @@ section{padding:55px 6%}
 <li>✓ WhatsApp Support</li>
 </ul>
 </div>
-<button class="btn" onclick="addToCart('1 Month Coaching Plan', 2000)">ADD TO CART • ₹2,000</button>
+<button type="button" class="btn add-plan-btn" data-name="1 Month Coaching Plan" data-price="2000">ADD TO CART • ₹2,000</button>
 </div>
 
-<div class="plan popular reveal delay-1">
+<div class="plan popular">
 <div>
 <small>MOST POPULAR • BEST VALUE</small>
 <h3>3 Months Plan</h3>
@@ -297,10 +268,10 @@ section{padding:55px 6%}
 <li>✓ WhatsApp Support</li>
 </ul>
 </div>
-<button class="btn" onclick="addToCart('3 Months Coaching Plan', 3500)">ADD TO CART • ₹3,500</button>
+<button type="button" class="btn add-plan-btn" data-name="3 Months Coaching Plan" data-price="3500">ADD TO CART • ₹3,500</button>
 </div>
 
-<div class="plan reveal delay-2">
+<div class="plan">
 <div>
 <small>COMPLETE TRANSFORMATION</small>
 <h3>6 Months Plan</h3>
@@ -312,19 +283,19 @@ section{padding:55px 6%}
 <li>✓ WhatsApp Support</li>
 </ul>
 </div>
-<button class="btn" onclick="addToCart('6 Months Coaching Plan', 10000)">ADD TO CART • ₹10,000</button>
+<button type="button" class="btn add-plan-btn" data-name="6 Months Coaching Plan" data-price="10000">ADD TO CART • ₹10,000</button>
 </div>
 </div>
 </section>
 
 <section id="about" class="bg-grey">
 <div class="split">
-<div class="story-box reveal">
+<div class="story-box">
 <span style="letter-spacing:2px;font-size:12px;color:#93c5fd">POWERLIFTING ATHLETE & COACH</span>
 <strong>5+ YEARS</strong>
 <p>Built from years of heavy lifting, competition discipline, and hands-on coaching experience in Jhansi and online.</p>
 </div>
-<div class="reveal delay-1">
+<div>
 <div class="tag">BUILT FROM YEARS OF TRAINING</div>
 <h2 style="font-size:clamp(28px,4vw,40px);line-height:1.15;margin:12px 0 18px;font-weight:900">HELLO, I'M SAHIB.</h2>
 <p style="color:#4b5563;margin-bottom:14px">My fitness journey started years ago on the gym floor—through consistent hard training, powerlifting competitions, and learning what actually works for real people.</p>
@@ -335,11 +306,11 @@ section{padding:55px 6%}
 </section>
 
 <section>
-<div class="heading reveal">
+<div class="heading">
 <div class="tag">GOT QUESTIONS?</div>
 <h2>FREQUENTLY ASKED QUESTIONS.</h2>
 </div>
-<div class="faq reveal">
+<div class="faq">
 <details>
 <summary>1. Will the diet plan include regular home-cooked Indian food?</summary>
 <p>Yes! Your diet chart is customized according to your daily routine, budget, and food preferences (veg or non-veg) using simple Indian meals.</p>
@@ -360,7 +331,7 @@ section{padding:55px 6%}
 </section>
 
 <section class="cta">
-<div class="reveal">
+<div>
 <div class="tag" style="color:#93c5fd">TRAINED BY SAHIB</div>
 <h2>DISCIPLINE TODAY.<br>STRENGTH FOR LIFE.</h2>
 <p>Your fitness journey starts with one decision. Select your plan and let's get started.</p>
@@ -369,16 +340,69 @@ section{padding:55px 6%}
 </section>
 
 <section id="contact">
-<div class="heading reveal">
+<div class="heading">
 <div class="tag">GET IN TOUCH</div>
 <h2>LET'S CONNECT.</h2>
 <p>For coaching enquiries, message directly on WhatsApp or Instagram.</p>
 </div>
 <div class="contact">
-<div class="reveal"><small>WHATSAPP</small><h3>Talk to Sahib</h3><a href="https://wa.me/916394313576">+91 63943 13576 →</a></div>
-<div class="reveal delay-1"><small>INSTAGRAM</small><h3>Follow the Journey</h3><a href="https://instagram.com/trainedbysahib_">@trainedbysahib_ →</a></div>
+<div><small>WHATSAPP</small><h3>Talk to Sahib</h3><a href="https://wa.me/916394313576">+91 63943 13576 →</a></div>
+<div><small>INSTAGRAM</small><h3>Follow the Journey</h3><a href="https://instagram.com/trainedbysahib_">@trainedbysahib_ →</a></div>
 </div>
 </section>
 </main>
 
-<footer>© <span id="year">
+<footer>© 2026 TRAINED BY SAHIB. ALL RIGHTS RESERVED.</footer>
+
+<script>
+var selectedPlan = null;
+
+function openCart() {
+  document.getElementById("cartDrawer").classList.add("open");
+  document.getElementById("cartOverlay").classList.add("open");
+}
+
+function closeCart() {
+  document.getElementById("cartDrawer").classList.remove("open");
+  document.getElementById("cartOverlay").classList.remove("open");
+}
+
+function updateCartUI() {
+  var countEl = document.getElementById("cartCount");
+  var bodyEl = document.getElementById("cartBody");
+  var footEl = document.getElementById("cartFoot");
+  var totalEl = document.getElementById("cartTotal");
+
+  if (!selectedPlan) {
+    countEl.textContent = "0";
+    bodyEl.innerHTML = '<p style="color:#6b7280;text-align:center;margin-top:40px">No plans in the cart yet.<br>Select a coaching plan to get started.</p>';
+    footEl.style.display = "none";
+  } else {
+    countEl.textContent = "1";
+    bodyEl.innerHTML = '<div class="cart-item"><div><strong>' + selectedPlan.name + '</strong><small style="color:#4b5563">₹' + selectedPlan.price + ' • Custom Workout + Diet + Check-ins</small></div><button type="button" class="remove-btn" id="removePlanBtn">Remove</button></div>';
+    totalEl.textContent = "₹" + selectedPlan.price;
+    footEl.style.display = "block";
+    document.getElementById("removePlanBtn").onclick = function() {
+      selectedPlan = null;
+      updateCartUI();
+    };
+  }
+}
+
+document.getElementById("openCartBtn").onclick = openCart;
+document.getElementById("closeCartBtn").onclick = closeCart;
+document.getElementById("cartOverlay").onclick = closeCart;
+
+var planButtons = document.querySelectorAll(".add-plan-btn");
+for (var i = 0; i < planButtons.length; i++) {
+  planButtons[i].onclick = function() {
+    selectedPlan = {
+      name: this.getAttribute("data-name"),
+      price: this.getAttribute("data-price")
+    };
+    updateCartUI();
+    openCart();
+  };
+}
+
+document.getElementById("checkoutBtn").onclick = fun
