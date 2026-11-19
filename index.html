@@ -35,6 +35,20 @@ section{padding:75px 7%}
 .service small{color:var(--navy);font-weight:bold;letter-spacing:2px}
 .service h3{margin:18px 0 8px;font-size:20px}
 .service p,.about p{color:#666;font-size:14px}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.plan{padding:32px 26px;border:1px solid #e6e8ed;background:#fff;display:flex;flex-direction:column;justify-content:space-between}
+.plan.popular{background:var(--navy);color:white;border-color:var(--navy)}
+.plan small{color:var(--navy);font-weight:bold;letter-spacing:2px;font-size:11px}
+.plan.popular small{color:#cbd5e1}
+.plan h3{font-size:24px;margin:10px 0}
+.price{font-size:40px;font-weight:900;color:var(--navy);margin:10px 0 20px}
+.plan.popular .price{color:white}
+.plan ul{list-style:none;margin-bottom:28px;border-top:1px solid #eee;padding-top:18px}
+.plan.popular ul{border-color:rgba(255,255,255,0.18)}
+.plan li{padding:7px 0;font-size:14px;color:#555}
+.plan.popular li{color:#e2e8f0}
+.plan .btn{text-align:center;width:100%}
+.plan.popular .btn{background:white;color:var(--navy)}
 .about{background:var(--grey);display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
 .experience{background:var(--navy);color:white;padding:40px}
 .experience strong{font-size:65px;display:block;line-height:1.2}
@@ -54,9 +68,7 @@ header{padding:14px 5%}
 nav{display:none}
 .hero{grid-template-columns:1fr;padding:55px 6%;background:white}
 .logo-box{min-height:190px}
-.services{grid-template-columns:1fr}
-.about{grid-template-columns:1fr}
-.contact{grid-template-columns:1fr}
+.services,.pricing,.about,.contact{grid-template-columns:1fr}
 section{padding:60px 6%}
 }
 </style>
@@ -69,6 +81,7 @@ section{padding:60px 6%}
 </div>
 <nav>
 <a href="#services">Services</a>
+<a href="#pricing">Plans</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -109,6 +122,60 @@ section{padding:60px 6%}
 </div>
 </section>
 
+<section id="pricing" style="background:#fafbfc">
+<div class="heading">
+<div class="tag">COACHING PLANS</div>
+<h2>INVEST IN YOUR STRENGTH.</h2>
+<p>Choose a plan that fits your fitness goals and commitment.</p>
+</div>
+<div class="pricing">
+<div class="plan">
+<div>
+<small>STARTER</small>
+<h3>1 Month Plan</h3>
+<div class="price">₹2,000</div>
+<ul>
+<li>✓ Custom Workout Plan</li>
+<li>✓ Diet Chart</li>
+<li>✓ Weekly Check-ins</li>
+<li>✓ WhatsApp Support</li>
+</ul>
+</div>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Plan%20(%E2%82%B92000).">CHOOSE 1 MONTH →</a>
+</div>
+
+<div class="plan popular">
+<div>
+<small>MOST POPULAR</small>
+<h3>3 Months Plan</h3>
+<div class="price">₹3,500</div>
+<ul>
+<li>✓ Custom Workout Plan</li>
+<li>✓ Diet Chart</li>
+<li>✓ Weekly Check-ins</li>
+<li>✓ WhatsApp Support</li>
+</ul>
+</div>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Plan%20(%E2%82%B93500).">CHOOSE 3 MONTHS →</a>
+</div>
+
+<div class="plan">
+<div>
+<small>TRANSFORMATION</small>
+<h3>6 Months Plan</h3>
+<div class="price">₹10,000</div>
+<ul>
+<li>✓ Custom Workout Plan</li>
+<li>✓ Diet Chart</li>
+<li>✓ Weekly Check-ins</li>
+<li>✓ WhatsApp Support</li>
+</ul>
+</div>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Plan%20(%E2%82%B910000).">CHOOSE 6 MONTHS →</a>
+</div>
+</div>
+</section>
+
 <section class="about" id="about">
 <div class="experience">
 <span>POWERLIFTING ATHLETE</span>
@@ -138,7 +205,7 @@ section{padding:60px 6%}
 </div>
 <div class="contact">
 <div><small>WHATSAPP</small><h3>Talk to Sahib</h3><a href="https://wa.me/916394313576">+91 63943 13576 →</a></div>
-<div><small>INSTAGRAM</small><h3>Follow the Journey</h3><a href="https://instagram.com/fitzzsahib">@fitzzsahib →</a></div>
+<div><small>INSTAGRAM</small><h3>Follow the Journey</h3><a href="https://instagram.com/trainedbysahib_">@trainedbysahib_ →</a></div>
 </div>
 </section>
 </main>
