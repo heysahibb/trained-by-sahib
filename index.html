@@ -3,130 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
-<meta name="description" content="TRAINED BY SAHIB - Personal Training, Powerlifting and Nutrition Coaching in Jhansi and Online.">
-<title>TRAINED BY SAHIB | Official Website</title>
+<meta name="theme-color" content="#101a3b">
+<meta name="description" content="TRAINED BY SAHIB - Personal Training, Powerlifting and Nutrition Coaching by Sahib in Jhansi and Online.">
+<title>TRAINED BY SAHIB | Personal & Online Fitness Coaching</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;color:#111827;background:#fff;line-height:1.6}
-:root{--navy:#101a3b;--grey:#f5f6f8}
-header{padding:18px 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee;position:sticky;top:0;background:white;z-index:10}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--navy);letter-spacing:2px}
-.brand img{width:65px;height:48px;object-fit:contain}
-nav a{margin:0 12px;text-decoration:none;color:#333;font-size:14px}
-.btn{display:inline-block;background:var(--navy);color:white;padding:14px 22px;text-decoration:none;font-weight:bold;border-radius:4px}
-.hero{padding:85px 7%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(110deg,#fff 60%,#f4f5f8 60%)}
-.tag{color:var(--navy);font-size:12px;font-weight:bold;letter-spacing:3px}
-h1{font-size:clamp(45px,7vw,78px);line-height:1.05;margin:20px 0}
+body{font-family:Arial,Helvetica,sans-serif;color:#111827;background:#fff;line-height:1.6}
+:root{--navy:#101a3b;--navy-dark:#0a1128;--grey:#f5f6f8;--border:#e5e7eb}
+.topbar{background:var(--navy);color:#fff;text-align:center;padding:8px 5%;font-size:12px;letter-spacing:1.5px;font-weight:bold}
+header{padding:16px 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(255,255,255,0.97);z-index:20}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--navy);letter-spacing:1.5px;font-size:15px}
+.brand img{width:60px;height:44px;object-fit:contain}
+nav a{margin:0 12px;text-decoration:none;color:#374151;font-size:14px;font-weight:600}
+nav a:hover{color:var(--navy)}
+.btn{display:inline-block;background:var(--navy);color:#fff;padding:14px 24px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;letter-spacing:0.5px;transition:0.2s}
+.btn:hover{background:var(--navy-dark)}
+.btn-outline{display:inline-block;border:2px solid var(--navy);color:var(--navy);padding:12px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px}
+.hero{padding:75px 7%;display:grid;grid-template-columns:1.15fr 0.85fr;gap:45px;align-items:center;background:linear-gradient(115deg,#fff 62%,#f4f6fa 62%)}
+.tag{color:var(--navy);font-size:12px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase}
+h1{font-size:clamp(38px,6vw,66px);line-height:1.08;margin:16px 0;font-weight:900}
 h1 span{color:var(--navy)}
-.hero p{color:#626875;font-size:17px;margin-bottom:25px;max-width:540px}
-.logo-box{padding:35px;background:white;border:1px solid #eee;display:flex;justify-content:center;align-items:center;min-height:300px}
-.logo-box img{width:100%;max-width:480px;object-fit:contain}
-.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:35px}
-.stats strong{display:block;color:var(--navy);font-size:21px}
-.stats small{color:#777;font-size:11px}
+.hero p{color:#4b5563;font-size:17px;margin-bottom:26px;max-width:560px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.logo-card{padding:40px;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:0 12px 30px rgba(16,26,59,0.06);text-align:center}
+.logo-card img{width:100%;max-width:380px;object-fit:contain;margin-bottom:18px}
+.logo-card p{font-size:13px;color:#6b7280;margin:0 auto}
+.stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;padding-top:24px;border-top:1px solid var(--border)}
+.stats strong{display:block;color:var(--navy);font-size:22px;font-weight:900}
+.stats small{color:#6b7280;font-size:12px}
 section{padding:75px 7%}
-.heading{margin-bottom:35px}
-.heading h2{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:10px 0}
-.heading p{color:#666}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.service{padding:27px;border:1px solid #e6e8ed;min-height:175px}
-.service small{color:var(--navy);font-weight:bold;letter-spacing:2px}
-.service h3{margin:18px 0 8px;font-size:20px}
-.service p,.about p{color:#666;font-size:14px}
-.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.plan{padding:32px 26px;border:1px solid #e6e8ed;background:#fff;display:flex;flex-direction:column;justify-content:space-between}
-.plan.popular{background:var(--navy);color:white;border-color:var(--navy)}
+.bg-grey{background:var(--grey)}
+.heading{margin-bottom:40px;max-width:680px}
+.heading h2{font-size:clamp(28px,4.5vw,44px);line-height:1.15;margin:10px 0;font-weight:900}
+.heading p{color:#4b5563;font-size:16px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.check-list{list-style:none}
+.check-list li{padding:14px 18px;background:#fff;border:1px solid var(--border);border-radius:6px;margin-bottom:12px;font-weight:600;color:#1f2937;display:flex;align-items:center;gap:12px}
+.check-icon{background:var(--navy);color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:30px;border:1px solid var(--border);background:#fff;border-radius:6px}
+.card small{color:var(--navy);font-weight:bold;letter-spacing:2px;font-size:11px}
+.card h3{margin:14px 0 10px;font-size:21px}
+.card p{color:#4b5563;font-size:14px}
+.for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.for-item{padding:20px;border:1px solid var(--border);background:var(--grey);border-radius:6px;font-weight:bold;color:var(--navy);font-size:15px}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.plan{padding:34px 28px;border:1px solid var(--border);background:#fff;border-radius:8px;display:flex;flex-direction:column;justify-content:space-between}
+.plan.popular{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-6px);box-shadow:0 16px 35px rgba(16,26,59,0.18)}
 .plan small{color:var(--navy);font-weight:bold;letter-spacing:2px;font-size:11px}
-.plan.popular small{color:#cbd5e1}
+.plan.popular small{color:#93c5fd}
 .plan h3{font-size:24px;margin:10px 0}
-.price{font-size:40px;font-weight:900;color:var(--navy);margin:10px 0 20px}
-.plan.popular .price{color:white}
-.plan ul{list-style:none;margin-bottom:28px;border-top:1px solid #eee;padding-top:18px}
+.price{font-size:42px;font-weight:900;color:var(--navy);margin:8px 0 20px}
+.plan.popular .price{color:#fff}
+.plan ul{list-style:none;margin-bottom:28px;border-top:1px solid var(--border);padding-top:18px}
 .plan.popular ul{border-color:rgba(255,255,255,0.18)}
-.plan li{padding:7px 0;font-size:14px;color:#555}
-.plan.popular li{color:#e2e8f0}
+.plan li{padding:8px 0;font-size:14px;color:#374151}
+.plan.popular li{color:#e5e7eb}
 .plan .btn{text-align:center;width:100%}
-.plan.popular .btn{background:white;color:var(--navy)}
-.about{background:var(--grey);display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
-.experience{background:var(--navy);color:white;padding:40px}
-.experience strong{font-size:65px;display:block;line-height:1.2}
-.about h2{font-size:38px;line-height:1.15;margin:15px 0}
-.about p{margin-bottom:15px}
-.cta{text-align:center;background:var(--navy);color:white}
-.cta h2{font-size:clamp(35px,5vw,55px);margin:15px 0}
-.cta p{color:#ddd;margin-bottom:25px}
-.white-btn{background:white;color:var(--navy)}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.contact div{padding:25px;border:1px solid #eee}
-.contact h3{margin:8px 0}
-.contact a{color:var(--navy);font-weight:bold;text-decoration:none}
-footer{text-align:center;padding:25px;background:#f5f6f8;color:#666;font-size:13px}
-@media(max-width:750px){
+.plan.popular .btn{background:#fff;color:var(--navy)}
+.story-box{background:var(--navy);color:#fff;padding:42px;border-radius:8px}
+.story-box strong{font-size:60px;display:block;line-height:1.1}
+.story-box p{color:#cbd5e1;margin-top:14px;font-size:15px}
+.faq{max-width:820px}
+details{border:1px solid var(--border);border-radius:6px;padding:18px 22px;margin-bottom:12px;background:#fff}
+summary{font-weight:bold;cursor:pointer;color:var(--navy);font-size:16px}
+details p{margin-top:10px;color:#4b5563;font-size:14px}
+.cta{text-align:center;background:var(--navy);color:#fff}
+.cta h2{font-size:clamp(32px,5vw,52px);margin:14px 0;font-weight:900}
+.cta p{color:#d1d5db;margin-bottom:26px;max-width:560px;margin-left:auto;margin-right:auto}
+.white-btn{background:#fff;color:var(--navy)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact div{padding:28px;border:1px solid var(--border);border-radius:6px}
+.contact small{color:var(--navy);font-weight:bold;letter-spacing:2px;font-size:11px}
+.contact h3{margin:8px 0;font-size:22px}
+.contact a{color:var(--navy);font-weight:bold;text-decoration:none;font-size:16px}
+footer{text-align:center;padding:28px 5%;background:var(--grey);color:#4b5563;font-size:13px;border-top:1px solid var(--border)}
+@media(max-width:820px){
 header{padding:14px 5%}
 nav{display:none}
-.hero{grid-template-columns:1fr;padding:55px 6%;background:white}
-.logo-box{min-height:190px}
-.services,.pricing,.about,.contact{grid-template-columns:1fr}
-section{padding:60px 6%}
+.hero,.split,.grid-3,.for-grid,.pricing,.contact{grid-template-columns:1fr}
+.hero{padding:50px 6%;background:#fff}
+.plan.popular{transform:none}
+section{padding:58px 6%}
 }
 </style>
 </head>
 <body>
+
+<div class="topbar">ONLINE & OFFLINE PERSONAL COACHING • SLOTS OPEN NOW</div>
+
 <header>
 <div class="brand">
 <img src="Logo.png" alt="TBS Logo">
 <span>TRAINED BY SAHIB</span>
 </div>
 <nav>
-<a href="#services">Services</a>
+<a href="#why">Why Sahib</a>
+<a href="#features">Features</a>
 <a href="#pricing">Plans</a>
-<a href="#about">About</a>
+<a href="#about">Story</a>
 <a href="#contact">Contact</a>
 </nav>
-<a class="btn" href="https://wa.me/916394313576">JOIN NOW</a>
+<a class="btn" href="#pricing">CHOOSE PLAN</a>
 </header>
 
 <main>
 <div class="hero">
 <div>
 <div class="tag">PERSONAL TRAINING • POWERLIFTING • NUTRITION</div>
-<h1>TRAIN WITH<br><span>PURPOSE.</span><br>GET STRONGER.</h1>
-<p>Transform your body. Build your strength. Achieve your fitness goals with personalised coaching by Sahib.</p>
-<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20start%20coaching.">START YOUR JOURNEY →</a>
+<h1>START YOUR <span>FITNESS JOURNEY,</span> THE RIGHT WAY.</h1>
+<p>Get a workout plan and diet guidance made specifically for your body and goals. With personal guidance from Sahib and regular WhatsApp check-ins, stay consistent and build real strength.</p>
+<div class="hero-btns">
+<a class="btn" href="#pricing">START YOUR TRANSFORMATION →</a>
+<a class="btn-outline" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20know%20more%20about%20coaching.">TALK ON WHATSAPP</a>
+</div>
 <div class="stats">
 <div><strong>5+ Years</strong><small>Powerlifting Experience</small></div>
-<div><strong>Online + Offline</strong><small>Coaching Available</small></div>
-<div><strong>Jhansi</strong><small>Uttar Pradesh</small></div>
+<div><strong>1-on-1</strong><small>Personal Guidance</small></div>
+<div><strong>Online + Jhansi</strong><small>Coaching Available</small></div>
 </div>
 </div>
-<div class="logo-box">
+<div class="logo-card">
 <img src="Logo.png" alt="TRAINED BY SAHIB">
+<p>Structured Training • Practical Nutrition • Real Results</p>
 </div>
 </div>
 
-<section id="services">
-<div class="heading">
-<div class="tag">WHAT I OFFER</div>
-<h2>COACHING BUILT AROUND YOUR GOALS.</h2>
-<p>Professional guidance to help you become stronger, fitter and more confident.</p>
+<section id="why" class="bg-grey">
+<div class="split">
+<div>
+<div class="tag">YOUR GOALS. A PLAN MADE FOR YOU.</div>
+<h2 style="font-size:clamp(28px,4vw,42px);line-height:1.15;margin:12px 0 18px;font-weight:900">WHY CHOOSE COACHING WITH SAHIB?</h2>
+<p style="color:#4b5563;margin-bottom:16px">Everyone has different fitness goals—fat loss, muscle building, or getting stronger. Knowing what to train, what to eat, and how to stay consistent shouldn't be guesswork.</p>
+<p style="color:#4b5563;margin-bottom:24px">With <strong>TRAINED BY SAHIB</strong>, you get a clear, step-by-step system designed around your lifestyle, routine, and experience level.</p>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20personal%20coaching.">GET PERSONAL COACHING →</a>
 </div>
-<div class="services">
-<div class="service"><small>01 / COACHING</small><h3>Personal Training</h3><p>Personalised workouts and training guidance.</p></div>
-<div class="service"><small>02 / PERFORMANCE</small><h3>Powerlifting Coaching</h3><p>Improve your squat, bench press and deadlift.</p></div>
-<div class="service"><small>03 / NUTRITION</small><h3>Diet & Nutrition Plans</h3><p>Practical nutrition guidance for your goals.</p></div>
-<div class="service"><small>04 / BODY GOALS</small><h3>Weight Loss</h3><p>Build healthy habits and achieve sustainable progress.</p></div>
-<div class="service"><small>05 / BUILD</small><h3>Muscle Building</h3><p>Develop muscle with structured training.</p></div>
-<div class="service"><small>06 / STRENGTH</small><h3>Strength Training</h3><p>Build strength, technique and confidence.</p></div>
+<div>
+<ul class="check-list">
+<li><span class="check-icon">✓</span> Direct Personal Guidance from Sahib</li>
+<li><span class="check-icon">✓</span> Custom Workout Plan Made for Your Body</li>
+<li><span class="check-icon">✓</span> Practical Indian Diet & Nutrition Guidance</li>
+<li><span class="check-icon">✓</span> Honest Supplement Guidance (No Waste)</li>
+<li><span class="check-icon">✓</span> Regular Weekly WhatsApp Check-ins & Support</li>
+</ul>
+</div>
 </div>
 </section>
 
-<section id="pricing" style="background:#fafbfc">
+<section id="features">
 <div class="heading">
-<div class="tag">COACHING PLANS</div>
+<div class="tag">WHAT YOU GET</div>
+<h2>EVERYTHING YOU NEED TO WORK TOWARDS YOUR GOALS.</h2>
+<p>No copy-paste templates. Every plan is structured around your progress.</p>
+</div>
+<div class="grid-3">
+<div class="card">
+<small>01 / TRAINING</small>
+<h3>Custom Workout Plan</h3>
+<p>Get a structured workout routine made according to your fitness goals, experience level, and available gym or home equipment—focused on muscle building, fat loss, or powerlifting strength.</p>
+</div>
+<div class="card">
+<small>02 / NUTRITION</small>
+<h3>Diet & Supplement Guide</h3>
+<p>Simple, sustainable diet plans built around everyday Indian foods you actually enjoy eating, along with clear guidance on which supplements are worth taking.</p>
+</div>
+<div class="card">
+<small>03 / ACCOUNTABILITY</small>
+<h3>Weekly Check-ins & Support</h3>
+<p>Stay connected on WhatsApp with weekly progress check-ins, form reviews, plan adjustments, and direct support whenever you feel stuck.</p>
+</div>
+</div>
+</section>
+
+<section class="bg-grey">
+<div class="heading">
+<div class="tag">IS THIS FOR YOU?</div>
+<h2>WHO IS THIS COACHING PROGRAM FOR?</h2>
+<p>Designed for anyone serious about transforming their physique and strength.</p>
+</div>
+<div class="for-grid">
+<div class="for-item">✓ Anyone Wanting to Build Lean Muscle</div>
+<div class="for-item">✓ Anyone Looking for Sustainable Fat Loss</div>
+<div class="for-item">✓ Beginners Starting Their Fitness Journey</div>
+<div class="for-item">✓ Lifters Improving Squat, Bench & Deadlift</div>
+<div class="for-item">✓ Anyone Confused About Workouts & Diet</div>
+<div class="for-item">✓ Busy Individuals Needing Accountability</div>
+</div>
+</section>
+
+<section id="pricing">
+<div class="heading">
+<div class="tag">CHOOSE YOUR PLAN</div>
 <h2>INVEST IN YOUR STRENGTH.</h2>
-<p>Choose a plan that fits your fitness goals and commitment.</p>
+<p>Select your coaching duration and start your transformation today.</p>
 </div>
 <div class="pricing">
 <div class="plan">
@@ -141,12 +211,12 @@ section{padding:60px 6%}
 <li>✓ WhatsApp Support</li>
 </ul>
 </div>
-<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Plan%20(%E2%82%B92000).">CHOOSE 1 MONTH →</a>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Plan%20(%E2%82%B92000).">JOIN 1 MONTH PLAN →</a>
 </div>
 
 <div class="plan popular">
 <div>
-<small>MOST POPULAR</small>
+<small>MOST POPULAR • BEST VALUE</small>
 <h3>3 Months Plan</h3>
 <div class="price">₹3,500</div>
 <ul>
@@ -156,12 +226,12 @@ section{padding:60px 6%}
 <li>✓ WhatsApp Support</li>
 </ul>
 </div>
-<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Plan%20(%E2%82%B93500).">CHOOSE 3 MONTHS →</a>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Plan%20(%E2%82%B93500).">JOIN 3 MONTHS PLAN →</a>
 </div>
 
 <div class="plan">
 <div>
-<small>TRANSFORMATION</small>
+<small>COMPLETE TRANSFORMATION</small>
 <h3>6 Months Plan</h3>
 <div class="price">₹10,000</div>
 <ul>
@@ -171,37 +241,65 @@ section{padding:60px 6%}
 <li>✓ WhatsApp Support</li>
 </ul>
 </div>
-<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Plan%20(%E2%82%B910000).">CHOOSE 6 MONTHS →</a>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Plan%20(%E2%82%B910000).">JOIN 6 MONTHS PLAN →</a>
 </div>
 </div>
 </section>
 
-<section class="about" id="about">
-<div class="experience">
-<span>POWERLIFTING ATHLETE</span>
-<strong>5+<br>YEARS</strong>
-<span>EXPERIENCE</span>
+<section id="about" class="bg-grey">
+<div class="split">
+<div class="story-box">
+<span style="letter-spacing:2px;font-size:12px;color:#93c5fd">POWERLIFTING ATHLETE & COACH</span>
+<strong>5+ YEARS</strong>
+<p>Built from years of heavy lifting, competition discipline, and hands-on coaching experience in Jhansi and online.</p>
 </div>
 <div>
-<div class="tag">MEET YOUR COACH</div>
-<h2>HELLO, I'M SAHIB.</h2>
-<p>I'm a powerlifting athlete with more than 5 years of experience. Through TRAINED BY SAHIB, I help people work towards their fitness goals through focused training, powerlifting coaching and practical nutrition guidance.</p>
-<p>Whether you are in Jhansi or training online, let's work together to build your strongest self.</p>
+<div class="tag">BUILT FROM YEARS OF TRAINING</div>
+<h2 style="font-size:clamp(28px,4vw,40px);line-height:1.15;margin:12px 0 18px;font-weight:900">HELLO, I'M SAHIB.</h2>
+<p style="color:#4b5563;margin-bottom:14px">My fitness journey started years ago on the gym floor—through consistent hard training, powerlifting competitions, and learning what actually works for real people.</p>
+<p style="color:#4b5563;margin-bottom:14px"><strong>TRAINED BY SAHIB</strong> was created with one clear goal: to make practical training and nutrition simple, structured, and accessible without unnecessary confusion.</p>
+<p style="color:#4b5563">Whether you are training at a gym in Jhansi or working out anywhere in India online, I will guide you step-by-step to build your strongest physique.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="heading">
+<div class="tag">GOT QUESTIONS?</div>
+<h2>FREQUENTLY ASKED QUESTIONS.</h2>
+</div>
+<div class="faq">
+<details>
+<summary>1. Will the diet plan include regular home-cooked Indian food?</summary>
+<p>Yes! Your diet chart is customized according to your daily routine, budget, and food preferences (veg or non-veg) using simple Indian meals.</p>
+</details>
+<details>
+<summary>2. I am a complete beginner. Can I join this coaching?</summary>
+<p>Absolutely. Whether you are stepping into the gym for the first time or already lifting weights, your plan is built from your current level.</p>
+</details>
+<details>
+<summary>3. How do weekly check-ins and WhatsApp support work?</summary>
+<p>Every week we review your weight, measurements, workout performance, and form videos on WhatsApp so we can adjust your plan for continuous progress.</p>
+</details>
+<details>
+<summary>4. How do I get started after selecting a plan?</summary>
+<p>Click on your preferred plan button to message me directly on WhatsApp. Once we discuss your goals and complete enrollment, your custom plans are shared within 24–48 hours.</p>
+</details>
 </div>
 </section>
 
 <section class="cta">
-<div class="tag" style="color:#ddd">TRAINED BY SAHIB</div>
+<div class="tag" style="color:#93c5fd">TRAINED BY SAHIB</div>
 <h2>DISCIPLINE TODAY.<br>STRENGTH FOR LIFE.</h2>
-<p>Your fitness journey starts with one decision. Let's get started.</p>
-<a class="btn white-btn" href="https://wa.me/916394313576">CONTACT SAHIB →</a>
+<p>Your fitness journey starts with one decision. Message now and let's build your plan.</p>
+<a class="btn white-btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20am%20ready%20to%20start%20my%20fitness%20journey.">MESSAGE SAHIB ON WHATSAPP →</a>
 </section>
 
 <section id="contact">
 <div class="heading">
 <div class="tag">GET IN TOUCH</div>
 <h2>LET'S CONNECT.</h2>
-<p>For coaching enquiries, contact me directly.</p>
+<p>For coaching enquiries, message directly on WhatsApp or Instagram.</p>
 </div>
 <div class="contact">
 <div><small>WHATSAPP</small><h3>Talk to Sahib</h3><a href="https://wa.me/916394313576">+91 63943 13576 →</a></div>
@@ -209,6 +307,7 @@ section{padding:60px 6%}
 </div>
 </section>
 </main>
+
 <footer>© <span id="year"></span> TRAINED BY SAHIB. ALL RIGHTS RESERVED.</footer>
 <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
