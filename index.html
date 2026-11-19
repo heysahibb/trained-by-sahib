@@ -18,7 +18,7 @@ header{padding:14px 7%;display:flex;align-items:center;justify-content:space-bet
 nav a{margin:0 12px;text-decoration:none;color:#374151;font-size:14px;font-weight:600;transition:0.2s}
 nav a:hover{color:var(--navy)}
 .header-actions{display:flex;align-items:center;gap:10px}
-.cart-btn{position:relative;background:#fff;border:1.5px solid var(--navy);color:var(--navy);padding:10px 14px;border-radius:4px;cursor:pointer;font-weight:bold;font-size:14px;display:inline-flex;align-items:center;gap:6px;transition:0.2s}
+.cart-btn{position:relative;background:#fff;border:1.5px solid var(--navy);color:var(--navy);padding:9px 13px;border-radius:4px;cursor:pointer;font-weight:bold;font-size:13px;display:inline-flex;align-items:center;gap:6px;transition:0.2s}
 .cart-btn:hover{background:#f4f6fa}
 .cart-count{background:var(--navy);color:#fff;font-size:11px;padding:2px 6px;border-radius:10px}
 .btn{display:inline-block;background:var(--navy);color:#fff;padding:13px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;letter-spacing:0.5px;border:none;cursor:pointer;transition:transform 0.25s ease, background 0.25s ease}
@@ -26,26 +26,26 @@ nav a:hover{color:var(--navy)}
 .btn-outline{display:inline-block;border:2px solid var(--navy);color:var(--navy);padding:12px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;transition:transform 0.25s ease, background 0.25s ease}
 .btn-outline:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
 
-/* Text & Entrance Animations */
+/* Safe Entrance & Scroll Animations */
 @keyframes fadeUp{
-  0%{opacity:0;transform:translateY(32px)}
+  0%{opacity:0;transform:translateY(28px)}
   100%{opacity:1;transform:translateY(0)}
 }
 @keyframes fadeScale{
-  0%{opacity:0;transform:scale(0.95) translateY(20px)}
+  0%{opacity:0;transform:scale(0.96) translateY(18px)}
   100%{opacity:1;transform:scale(1) translateY(0)}
 }
-.hero-anim-1{animation:fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both}
-.hero-anim-2{animation:fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.15s both}
-.hero-anim-3{animation:fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.3s both}
-.hero-anim-4{animation:fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.45s both}
-.hero-card-anim{animation:fadeScale 0.9s cubic-bezier(0.22,1,0.36,1) 0.25s both}
+.hero-anim-1{animation:fadeUp 0.65s ease-out both}
+.hero-anim-2{animation:fadeUp 0.75s ease-out 0.12s both}
+.hero-anim-3{animation:fadeUp 0.75s ease-out 0.24s both}
+.hero-anim-4{animation:fadeUp 0.75s ease-out 0.36s both}
+.hero-card-anim{animation:fadeScale 0.85s ease-out 0.2s both}
 
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1)}
-.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal{opacity:1;transform:translateY(0);transition:opacity 0.65s ease-out, transform 0.65s ease-out}
+.js-ready .reveal{opacity:0;transform:translateY(26px)}
+.js-ready .reveal.visible{opacity:1;transform:translateY(0)}
 .delay-1{transition-delay:0.1s}
 .delay-2{transition-delay:0.2s}
-.delay-3{transition-delay:0.3s}
 
 .hero{padding:75px 7%;display:grid;grid-template-columns:1.15fr 0.85fr;gap:45px;align-items:center;background:linear-gradient(115deg,#fff 62%,#f4f6fa 62%)}
 .tag{color:var(--navy);font-size:12px;font-weight:bold;letter-spacing:2.5px;text-transform:uppercase}
@@ -134,9 +134,9 @@ header{padding:12px 4%}
 nav{display:none}
 .brand span{font-size:13px}
 .hero,.split,.grid-3,.for-grid,.pricing,.contact{grid-template-columns:1fr}
-.hero{padding:50px 6%;background:#fff}
+.hero{padding:45px 6%;background:#fff}
 .plan.popular{transform:none}
-section{padding:58px 6%}
+section{padding:55px 6%}
 }
 </style>
 </head>
@@ -158,11 +158,10 @@ section{padding:58px 6%}
 </nav>
 <div class="header-actions">
 <button class="cart-btn" onclick="toggleCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
-<a class="btn" href="#pricing" style="padding:10px 16px">JOIN</a>
+<a class="btn" href="#pricing" style="padding:10px 15px;font-size:13px">JOIN</a>
 </div>
 </header>
 
-<!-- Cart Drawer -->
 <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
 <div class="cart-drawer" id="cartDrawer">
 <div class="cart-head">
@@ -377,144 +376,9 @@ section{padding:58px 6%}
 </div>
 <div class="contact">
 <div class="reveal"><small>WHATSAPP</small><h3>Talk to Sahib</h3><a href="https://wa.me/916394313576">+91 63943 13576 →</a></div>
-<div class="reveal delay-1"><small>INSTAGRAM</small><h3>Follow the Journey</h3><a href="https://instagram.com/traiel stuck.</p>
-</div>
-</div>
-</section>
-
-<section class="bg-grey">
-<div class="heading">
-<div class="tag">IS THIS FOR YOU?</div>
-<h2>WHO IS THIS COACHING PROGRAM FOR?</h2>
-<p>Designed for anyone serious about transforming their physique and strength.</p>
-</div>
-<div class="for-grid">
-<div class="for-item">✓ Anyone Wanting to Build Lean Muscle</div>
-<div class="for-item">✓ Anyone Looking for Sustainable Fat Loss</div>
-<div class="for-item">✓ Beginners Starting Their Fitness Journey</div>
-<div class="for-item">✓ Lifters Improving Squat, Bench & Deadlift</div>
-<div class="for-item">✓ Anyone Confused About Workouts & Diet</div>
-<div class="for-item">✓ Busy Individuals Needing Accountability</div>
-</div>
-</section>
-
-<section id="pricing">
-<div class="heading">
-<div class="tag">CHOOSE YOUR PLAN</div>
-<h2>INVEST IN YOUR STRENGTH.</h2>
-<p>Select your coaching duration and start your transformation today.</p>
-</div>
-<div class="pricing">
-<div class="plan">
-<div>
-<small>STARTER</small>
-<h3>1 Month Plan</h3>
-<div class="price">₹2,000</div>
-<ul>
-<li>✓ Custom Workout Plan</li>
-<li>✓ Diet Chart</li>
-<li>✓ Weekly Check-ins</li>
-<li>✓ WhatsApp Support</li>
-</ul>
-</div>
-<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Plan%20(%E2%82%B92000).">JOIN 1 MONTH PLAN →</a>
-</div>
-
-<div class="plan popular">
-<div>
-<small>MOST POPULAR • BEST VALUE</small>
-<h3>3 Months Plan</h3>
-<div class="price">₹3,500</div>
-<ul>
-<li>✓ Custom Workout Plan</li>
-<li>✓ Diet Chart</li>
-<li>✓ Weekly Check-ins</li>
-<li>✓ WhatsApp Support</li>
-</ul>
-</div>
-<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Plan%20(%E2%82%B93500).">JOIN 3 MONTHS PLAN →</a>
-</div>
-
-<div class="plan">
-<div>
-<small>COMPLETE TRANSFORMATION</small>
-<h3>6 Months Plan</h3>
-<div class="price">₹10,000</div>
-<ul>
-<li>✓ Custom Workout Plan</li>
-<li>✓ Diet Chart</li>
-<li>✓ Weekly Check-ins</li>
-<li>✓ WhatsApp Support</li>
-</ul>
-</div>
-<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Plan%20(%E2%82%B910000).">JOIN 6 MONTHS PLAN →</a>
-</div>
-</div>
-</section>
-
-<section id="about" class="bg-grey">
-<div class="split">
-<div class="story-box">
-<span style="letter-spacing:2px;font-size:12px;color:#93c5fd">POWERLIFTING ATHLETE & COACH</span>
-<strong>5+ YEARS</strong>
-<p>Built from years of heavy lifting, competition discipline, and hands-on coaching experience in Jhansi and online.</p>
-</div>
-<div>
-<div class="tag">BUILT FROM YEARS OF TRAINING</div>
-<h2 style="font-size:clamp(28px,4vw,40px);line-height:1.15;margin:12px 0 18px;font-weight:900">HELLO, I'M SAHIB.</h2>
-<p style="color:#4b5563;margin-bottom:14px">My fitness journey started years ago on the gym floor—through consistent hard training, powerlifting competitions, and learning what actually works for real people.</p>
-<p style="color:#4b5563;margin-bottom:14px"><strong>TRAINED BY SAHIB</strong> was created with one clear goal: to make practical training and nutrition simple, structured, and accessible without unnecessary confusion.</p>
-<p style="color:#4b5563">Whether you are training at a gym in Jhansi or working out anywhere in India online, I will guide you step-by-step to build your strongest physique.</p>
-</div>
-</div>
-</section>
-
-<section>
-<div class="heading">
-<div class="tag">GOT QUESTIONS?</div>
-<h2>FREQUENTLY ASKED QUESTIONS.</h2>
-</div>
-<div class="faq">
-<details>
-<summary>1. Will the diet plan include regular home-cooked Indian food?</summary>
-<p>Yes! Your diet chart is customized according to your daily routine, budget, and food preferences (veg or non-veg) using simple Indian meals.</p>
-</details>
-<details>
-<summary>2. I am a complete beginner. Can I join this coaching?</summary>
-<p>Absolutely. Whether you are stepping into the gym for the first time or already lifting weights, your plan is built from your current level.</p>
-</details>
-<details>
-<summary>3. How do weekly check-ins and WhatsApp support work?</summary>
-<p>Every week we review your weight, measurements, workout performance, and form videos on WhatsApp so we can adjust your plan for continuous progress.</p>
-</details>
-<details>
-<summary>4. How do I get started after selecting a plan?</summary>
-<p>Click on your preferred plan button to message me directly on WhatsApp. Once we discuss your goals and complete enrollment, your custom plans are shared within 24–48 hours.</p>
-</details>
-</div>
-</section>
-
-<section class="cta">
-<div class="tag" style="color:#93c5fd">TRAINED BY SAHIB</div>
-<h2>DISCIPLINE TODAY.<br>STRENGTH FOR LIFE.</h2>
-<p>Your fitness journey starts with one decision. Message now and let's build your plan.</p>
-<a class="btn white-btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20am%20ready%20to%20start%20my%20fitness%20journey.">MESSAGE SAHIB ON WHATSAPP →</a>
-</section>
-
-<section id="contact">
-<div class="heading">
-<div class="tag">GET IN TOUCH</div>
-<h2>LET'S CONNECT.</h2>
-<p>For coaching enquiries, message directly on WhatsApp or Instagram.</p>
-</div>
-<div class="contact">
-<div><small>WHATSAPP</small><h3>Talk to Sahib</h3><a href="https://wa.me/916394313576">+91 63943 13576 →</a></div>
-<div><small>INSTAGRAM</small><h3>Follow the Journey</h3><a href="https://instagram.com/trainedbysahib_">@trainedbysahib_ →</a></div>
+<div class="reveal delay-1"><small>INSTAGRAM</small><h3>Follow the Journey</h3><a href="https://instagram.com/trainedbysahib_">@trainedbysahib_ →</a></div>
 </div>
 </section>
 </main>
 
-<footer>© <span id="year"></span> TRAINED BY SAHIB. ALL RIGHTS RESERVED.</footer>
-<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
-</body>
-</html>
+<footer>© <span id="year">
