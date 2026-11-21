@@ -8,85 +8,85 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#111827;background:#f8fafc;line-height:1.55;overflow-x:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#111827;background:#f8fafc;line-height:1.55;overflow-x:hidden;width:100%}
 :root{--navy:#101a3b;--gold:#b99342;--gold-l:#d4af5a;--bg:#f8fafc;--card:#ffffff;--border:#e2e8f0;--green:#16803d;--muted:#64748b}
 
 /* Top Navbar */
 .topbar{background:var(--navy);color:#fff;text-align:center;padding:8px 4%;font-size:11px;letter-spacing:1.2px;font-weight:700}
-header{padding:14px 6%;display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy);font-size:15px;letter-spacing:1px}
-.brand img{width:50px;height:36px;object-fit:contain}
+header{padding:14px 5%;display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy);font-size:14px;letter-spacing:1px}
+.brand img{width:48px;height:36px;object-fit:contain}
 nav a{margin:0 12px;text-decoration:none;color:#334155;font-size:14px;font-weight:600}
-nav a:hover{color:var(--navy)}
 .btn{display:inline-block;background:var(--navy);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;border:none;cursor:pointer;text-align:center}
 .btn-upi{display:block;width:100%;background:var(--green);color:#fff;padding:12px 16px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;text-align:center}
 .btn-out{display:inline-block;border:1.5px solid var(--navy);color:var(--navy);padding:11px 18px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;background:#fff;text-align:center}
 
 /* FITTR Style Hero */
-.hero{padding:56px 6% 48px;background:linear-gradient(180deg,#ffffff 0%,#f1f5f9 100%);border-bottom:1px solid var(--border)}
-.hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:36px;align-items:center}
-.pill{display:inline-block;background:#fef3c7;color:#92400e;font-size:11px;font-weight:800;padding:5px 12px;border-radius:20px;letter-spacing:0.8px;margin-bottom:14px}
-h1{font-size:clamp(32px,5vw,52px);line-height:1.12;font-weight:900;color:#0f172a;margin-bottom:14px}
+.hero{padding:48px 5% 44px;background:linear-gradient(180deg,#ffffff 0%,#f1f5f9 100%);border-bottom:1px solid var(--border)}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center;max-width:1160px;margin:0 auto}
+.pill{display:inline-block;background:#fef3c7;color:#92400e;font-size:11px;font-weight:800;padding:5px 12px;border-radius:20px;letter-spacing:0.6px;margin-bottom:14px}
+h1{font-size:clamp(30px,5vw,50px);line-height:1.12;font-weight:900;color:#0f172a;margin-bottom:14px}
 h1 span{color:var(--navy)}
-.hero p{color:#475569;font-size:16px;margin-bottom:24px;max-width:520px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero p{color:#475569;font-size:15px;margin-bottom:22px;max-width:520px}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
 
-/* Coach Profile Card (FITTR Style) */
-.coach-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 12px 30px rgba(15,23,42,0.06)}
-.coach-top{display:flex;align-items:center;gap:16px;margin-bottom:16px}
-.coach-top img{width:76px;height:76px;border-radius:50%;object-fit:cover;border:2.5px solid var(--gold)}
+/* Coach Profile Card */
+.coach-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 12px 30px rgba(15,23,42,0.06);width:100%}
+.coach-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.coach-top img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:top center;border:2.5px solid var(--gold);flex-shrink:0;background:#f1f5f9}
 .coach-badge{background:#dcfce7;color:#166534;font-size:11px;font-weight:700;padding:3px 9px;border-radius:12px;display:inline-block;margin-bottom:4px}
-.coach-top h3{font-size:20px;color:var(--navy);font-weight:800}
-.coach-top small{color:var(--muted);font-size:13px;display:block}
-.coach-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.coach-top h3{font-size:19px;color:var(--navy);font-weight:800}
+.coach-top small{color:var(--muted);font-size:12px;display:block}
+.coach-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
 .coach-tags span{background:#f1f5f9;color:#334155;font-size:12px;font-weight:600;padding:5px 10px;border-radius:6px}
-.coach-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;background:#f8fafc;padding:12px;border-radius:10px;text-align:center;margin-bottom:16px;border:1px solid var(--border)}
-.coach-stats strong{display:block;color:var(--navy);font-size:16px;font-weight:800}
+.coach-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;background:#f8fafc;padding:12px 8px;border-radius:10px;text-align:center;margin-bottom:14px;border:1px solid var(--border)}
+.coach-stats strong{display:block;color:var(--navy);font-size:15px;font-weight:800}
 .coach-stats small{color:var(--muted);font-size:11px}
 
 /* Sections */
-section{padding:58px 6%}
-.sec-head{margin-bottom:32px;max-width:640px}
+section{padding:54px 5%}
+.container{max-width:1160px;margin:0 auto}
+.sec-head{margin-bottom:28px;max-width:640px}
 .sec-head small{color:var(--gold);font-weight:800;letter-spacing:1.8px;font-size:11px;text-transform:uppercase}
 .sec-head h2{font-size:clamp(24px,4vw,36px);font-weight:900;color:#0f172a;margin:6px 0 8px;line-height:1.15}
 .sec-head p{color:#475569;font-size:15px}
 
 /* FITTR 3 Program Cards */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .prog-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(15,23,42,0.03);display:flex;flex-direction:column;justify-content:space-between}
 .prog-card img{width:100%;height:185px;object-fit:cover;display:block}
-.prog-body{padding:22px}
-.prog-body h3{font-size:19px;color:var(--navy);margin-bottom:8px;font-weight:800}
-.prog-body p{color:#475569;font-size:14px;margin-bottom:16px}
+.prog-body{padding:20px}
+.prog-body h3{font-size:18px;color:var(--navy);margin-bottom:8px;font-weight:800}
+.prog-body p{color:#475569;font-size:14px;margin-bottom:14px}
 .prog-link{color:var(--navy);font-weight:700;font-size:13px;text-decoration:none}
 
 /* Interactive Goal Tabs */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
-.tab-btn{padding:9px 16px;border-radius:20px;border:1px solid var(--border);background:#fff;color:#334155;font-weight:700;font-size:13px;cursor:pointer}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.tab-btn{padding:9px 15px;border-radius:20px;border:1px solid var(--border);background:#fff;color:#334155;font-weight:700;font-size:13px;cursor:pointer}
 .tab-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.goal-panel{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;align-items:center}
-.goal-list{list-style:none;margin:14px 0 20px}
-.goal-list li{padding:7px 0;font-size:14px;color:#334155;font-weight:600}
-.goal-box{background:var(--navy);color:#fff;padding:24px;border-radius:12px}
+.goal-panel{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:22px;align-items:center}
+.goal-list{list-style:none;margin:12px 0 18px}
+.goal-list li{padding:6px 0;font-size:14px;color:#334155;font-weight:600}
+.goal-box{background:var(--navy);color:#fff;padding:22px;border-radius:12px}
 
 /* Calculator */
-.calc-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px;max-width:780px}
-.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.calc-wrap{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px;max-width:780px}
+.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
 .field label{display:block;font-size:11px;font-weight:700;color:#475569;margin-bottom:5px;text-transform:uppercase}
 .field input,.field select{width:100%;padding:11px;border:1px solid var(--border);border-radius:8px;font-size:14px;background:#f8fafc}
-.res-bar{background:var(--navy);color:#fff;padding:20px;border-radius:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;margin-top:16px}
-.res-bar strong{display:block;font-size:22px;color:var(--gold-l);font-weight:900}
+.res-bar{background:var(--navy);color:#fff;padding:18px;border-radius:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center;margin-top:14px}
+.res-bar strong{display:block;font-size:21px;color:var(--gold-l);font-weight:900}
 .res-bar span{font-size:11px;color:#cbd5e1}
 
 /* Pricing Plans */
-.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.plan{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:26px 22px;display:flex;flex-direction:column;justify-content:space-between}
 .plan.popular{background:var(--navy);color:#fff;border:2px solid var(--gold);box-shadow:0 16px 34px rgba(16,26,59,0.16)}
 .pop-tag{background:var(--gold);color:#111827;font-size:10px;font-weight:900;padding:4px 10px;border-radius:12px;display:inline-block;margin-bottom:10px}
 .plan h3{font-size:21px;font-weight:800;margin-bottom:4px}
 .price{font-size:36px;font-weight:900;margin:8px 0 16px;color:var(--navy)}
 .plan.popular .price{color:var(--gold-l)}
-.plan ul{list-style:none;border-top:1px solid var(--border);padding-top:14px;margin-bottom:20px}
+.plan ul{list-style:none;border-top:1px solid var(--border);padding-top:14px;margin-bottom:18px}
 .plan.popular ul{border-color:rgba(255,255,255,0.16)}
 .plan li{padding:6px 0;font-size:14px;color:#475569}
 .plan.popular li{color:#e2e8f0}
@@ -124,14 +124,14 @@ nav{display:none}
 <a href="#pricing">Packages</a>
 <a href="#reviews">Reviews</a>
 </nav>
-<a class="btn" href="#pricing" style="padding:9px 16px;font-size:12px">GET STARTED</a>
+<a class="btn" href="#pricing" style="padding:9px 15px;font-size:12px">GET STARTED</a>
 </header>
 
 <section class="hero">
 <div class="hero-grid">
 <div>
 <div class="pill">★ 5+ YEARS POWERLIFTING & COACHING EXPERIENCE</div>
-<h1>UNLOCK YOUR <span>BEST PHYSIQUE</span> WITH SCIENCE-BACKED COACHING.</h1>
+<h1>UNLOCK YOUR <span>BEST PHYSIQUE</span> WITH SCIENCE-BASED COACHING.</h1>
 <p>Get 1-on-1 guidance from Coach Sahib with customized Indian diet charts, structured workout routines, and weekly WhatsApp check-ins built around your lifestyle.</p>
 <div class="hero-btns">
 <a class="btn" href="#pricing">EXPLORE PACKAGES →</a>
@@ -141,7 +141,7 @@ nav{display:none}
 
 <div class="coach-card">
 <div class="coach-top">
-<img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=400&q=80" alt="Coach Sahib">
+<img src="coach.jpg" onerror="this.src='Logo.png'" alt="Coach Sahib">
 <div>
 <span class="coach-badge">● SLOTS AVAILABLE</span>
 <h3>Coach Sahib</h3>
@@ -165,6 +165,7 @@ nav{display:none}
 </section>
 
 <section id="programs">
+<div class="container">
 <div class="sec-head">
 <small>COACHING OFFERINGS</small>
 <h2>YOUR IDEAL COACHING PROGRAM IS ONE CLICK AWAY.</h2>
@@ -196,9 +197,11 @@ nav{display:none}
 </div>
 </div>
 </div>
+</div>
 </section>
 
 <section id="goals" style="background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<div class="container">
 <div class="sec-head">
 <small>TAILORED FOR YOU</small>
 <h2>SELECT YOUR FITNESS GOAL.</h2>
@@ -210,7 +213,7 @@ nav{display:none}
 </div>
 <div class="goal-panel">
 <div>
-<h3 id="gTitle" style="font-size:22px;color:var(--navy);font-weight:800">Sustainable Fat Loss (Without Starving)</h3>
+<h3 id="gTitle" style="font-size:21px;color:var(--navy);font-weight:800">Sustainable Fat Loss (Without Starving)</h3>
 <p id="gDesc" style="color:#475569;font-size:14px;margin-top:6px">Lose stubborn fat while eating everyday Indian meals like roti, dal, paneer, eggs, or chicken.</p>
 <ul class="goal-list" id="gList">
 <li>✓ Calorie-deficit diet chart customized to your budget</li>
@@ -221,13 +224,15 @@ nav{display:none}
 </div>
 <div class="goal-box">
 <small style="color:var(--gold-l);font-weight:700;letter-spacing:1px">EXPECTED TIMELINE</small>
-<h4 id="gTime" style="font-size:28px;margin:8px 0;font-weight:900">8 – 12 Weeks</h4>
+<h4 id="gTime" style="font-size:26px;margin:8px 0;font-weight:900">8 – 12 Weeks</h4>
 <p style="font-size:13px;color:#cbd5e1">Consistent weekly progress tracked every Sunday on WhatsApp with Coach Sahib.</p>
+</div>
 </div>
 </div>
 </section>
 
 <section id="tools">
+<div class="container">
 <div class="sec-head">
 <small>FREE FITNESS CALCULATORS</small>
 <h2>CALCULATE YOUR DAILY CALORIES & MACROS.</h2>
@@ -259,9 +264,11 @@ nav{display:none}
 <div><strong id="outPro">140 g</strong><span>Daily Protein</span></div>
 </div>
 </div>
+</div>
 </section>
 
 <section id="pricing" style="background:#fff;border-top:1px solid var(--border)">
+<div class="container">
 <div class="sec-head">
 <small>COACHING PACKAGES</small>
 <h2>INVEST IN YOUR TRANSFORMATION.</h2>
@@ -322,9 +329,11 @@ nav{display:none}
 </div>
 </div>
 </div>
+</div>
 </section>
 
 <section id="reviews">
+<div class="container">
 <div class="sec-head">
 <small>TRANSFORMATION STORIES</small>
 <h2>WHAT CLIENTS SAY ABOUT COACH SAHIB.</h2>
@@ -346,9 +355,11 @@ nav{display:none}
 <strong style="color:var(--navy);font-size:14px">Rohit Kushwaha</strong><br><small style="color:var(--muted)">3 Months Coaching Plan</small>
 </div>
 </div>
+</div>
 </section>
 
 <section style="background:#fff;border-top:1px solid var(--border)">
+<div class="container">
 <div class="sec-head">
 <small>FAQ</small>
 <h2>FREQUENTLY ASKED QUESTIONS.</h2>
@@ -357,6 +368,7 @@ nav{display:none}
 <details><summary>1. Will my diet chart include normal Indian home food?</summary><p>Yes, every diet chart is built around everyday Indian meals based on your budget and veg/non-veg preference.</p></details>
 <details><summary>2. How quickly do I get my plan after payment?</summary><p>Once you pay via UPI and share the screenshot on WhatsApp (+91 63943 13576), your custom workout and diet plans are delivered within 24–48 hours.</p></details>
 <details><summary>3. Can complete beginners join?</summary><p>Yes, your workout routine is designed specifically for your current experience level and equipment access.</p></details>
+</div>
 </div>
 </section>
 
@@ -380,5 +392,4 @@ function showGoal(type, btn) {
     document.getElementById("gTime").innerHTML = "8 – 12 Weeks";
   } else if (type === "muscle") {
     document.getElementById("gTitle").innerHTML = "Lean Muscle Building & Hypertrophy";
-    document.getElementById("gDesc").innerHTML = "Build clean muscle mass and aesthetic proportions with progressive overload training.";
-    document.getElementById("gList").innerHTML = "<li>✓ Structured Push-Pull-Legs or Upper-Lower split</li><li>✓ Lean surplus Indian diet with exact macros<
+    document.getElementById("gDesc").innerHTML = 
