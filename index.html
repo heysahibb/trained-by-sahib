@@ -11,13 +11,11 @@ html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#f3f4f6;background:#070709;line-height:1.55;overflow-x:hidden;width:100%}
 :root{
   --black:#070709;
-  --card:#111216;
   --card-shine:linear-gradient(145deg,#171920 0%,#0b0c0f 100%);
   --gold-grad:linear-gradient(135deg,#f6d379 0%,#d4af37 50%,#9c771c 100%);
   --gold:#d4af37;
   --gold-light:#f6d379;
   --border:rgba(212,175,55,0.22);
-  --green:#16a34a;
   --muted:#9ca3af;
 }
 
@@ -26,7 +24,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-s
 header{padding:14px 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(7,7,9,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:30}
 .brand{display:flex;align-items:center;gap:10px;font-weight:900;color:#fff;font-size:14px;letter-spacing:1.2px}
 .brand img{width:48px;height:36px;object-fit:contain;background:#fff;border-radius:6px;padding:2px}
-nav a{margin:0 12px;text-decoration:none;color:#d1d5db;font-size:14px;font-weight:600}
+nav a{margin:0 10px;text-decoration:none;color:#d1d5db;font-size:14px;font-weight:600}
 nav a:hover{color:var(--gold-light)}
 
 /* Gold Gradient & Action Buttons */
@@ -104,7 +102,7 @@ section{padding:56px 5%}
 .plan-btns{display:flex;flex-direction:column;gap:9px}
 .plan .btn-wa{display:block;width:100%;border:1.5px solid var(--gold);color:var(--gold-light);padding:11px 16px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;text-align:center;background:rgba(212,175,55,0.06)}
 
-/* Reviews & FAQ */
+/* Reviews, FAQ, Contact & Terms */
 .rev-card{background:var(--card-shine);border:1px solid var(--border);border-radius:12px;padding:22px}
 .stars{color:var(--gold-light);font-size:15px;margin-bottom:8px}
 .faq{max-width:780px}
@@ -112,12 +110,26 @@ details{background:var(--card-shine);border:1px solid var(--border);border-radiu
 summary{font-weight:700;cursor:pointer;color:#fff;font-size:15px}
 details p{margin-top:8px;color:#9ca3af;font-size:14px}
 
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:var(--card-shine);border:1px solid rgba(212,175,55,0.35);border-radius:14px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.contact-card small{color:var(--gold);font-weight:800;letter-spacing:1.5px;font-size:11px;text-transform:uppercase}
+.contact-card h3{font-size:21px;color:#fff;margin:8px 0 6px;font-weight:800}
+.contact-card p{color:#9ca3af;font-size:14px;margin-bottom:16px}
+.contact-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+.terms-box{background:var(--card-shine);border:1px solid var(--border);border-radius:14px;padding:26px;max-width:920px}
+.terms-list{list-style:none}
+.terms-list li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);font-size:14px;color:#d1d5db}
+.terms-list li:last-child{border-bottom:none;padding-bottom:0}
+.terms-list strong{color:var(--gold-light);display:block;margin-bottom:3px;font-size:14px}
+
 footer{background:#050507;color:#9ca3af;text-align:center;padding:34px 5% 85px;font-size:13px;border-top:1px solid var(--border)}
+footer a{color:var(--gold-light);text-decoration:none;font-weight:600}
 .wa-float{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;padding:12px 18px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,0.45);z-index:50}
 
 @media(max-width:850px){
 nav{display:none}
-.hero-grid,.grid-3,.goal-panel,.pricing{grid-template-columns:1fr}
+.hero-grid,.grid-3,.goal-panel,.pricing,.contact-grid{grid-template-columns:1fr}
 .calc-grid{grid-template-columns:1fr 1fr}
 }
 </style>
@@ -133,7 +145,8 @@ nav{display:none}
 <a href="#goals">Goals</a>
 <a href="#tools">Tools</a>
 <a href="#pricing">Packages</a>
-<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+<a href="#terms">Terms</a>
 </nav>
 <a class="btn" href="#pricing" style="padding:9px 15px;font-size:12px">GET STARTED</a>
 </header>
@@ -146,7 +159,7 @@ nav{display:none}
 <p>Get 1-on-1 guidance from Coach Sahib with customized Indian diet charts, structured workout routines, and weekly WhatsApp check-ins built around your lifestyle.</p>
 <div class="hero-btns">
 <a class="btn" href="#pricing">EXPLORE PACKAGES →</a>
-<a class="btn-out" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20book%20a%20free%20fitness%20consultation.">FREE CONSULTATION</a>
+<a class="btn-out" href="https://wa.me/916394313586?text=Hi%20Sahib%2C%20I%20want%20to%20book%20a%20free%20fitness%20consultation.">FREE CONSULTATION</a>
 </div>
 </div>
 
@@ -170,7 +183,7 @@ nav{display:none}
 <div><strong>1-on-1</strong><small>WhatsApp Support</small></div>
 <div><strong>24-48h</strong><small>Plan Delivery</small></div>
 </div>
-<a class="btn" style="width:100%" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20start%20coaching%20with%20you.">TALK TO COACH SAHIB →</a>
+<a class="btn" style="width:100%" href="https://wa.me/916394313586?text=Hi%20Sahib%2C%20I%20want%20to%20start%20coaching%20with%20you.">TALK TO COACH SAHIB →</a>
 </div>
 </div>
 </section>
@@ -283,7 +296,7 @@ nav{display:none}
 <div class="sec-head">
 <small>COACHING PACKAGES</small>
 <h2>INVEST IN YOUR TRANSFORMATION.</h2>
-<p>Pay online via UPI App or book your slot directly on WhatsApp.</p>
+<p>Pay online via UPI App or book your slot directly on WhatsApp. (By enrolling, you agree to our Terms & Conditions below.)</p>
 </div>
 <div class="pricing">
 <div class="plan">
@@ -300,7 +313,7 @@ nav{display:none}
 </div>
 <div class="plan-btns">
 <a class="btn-upi" href="upi://pay?pa=ak8270494-1@okhdfcbank&pn=Trained%20By%20Sahib&am=2000&cu=INR">PAY ₹2,000 VIA UPI →</a>
-<a class="btn-wa" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Plan%20(%E2%82%B92000).">BOOK ON WHATSAPP →</a>
+<a class="btn-wa" href="https://wa.me/916394313586?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Plan%20(%E2%82%B92000).">BOOK ON WHATSAPP →</a>
 </div>
 </div>
 
@@ -318,7 +331,7 @@ nav{display:none}
 </div>
 <div class="plan-btns">
 <a class="btn-upi" href="upi://pay?pa=ak8270494-1@okhdfcbank&pn=Trained%20By%20Sahib&am=3500&cu=INR">PAY ₹3,500 VIA UPI →</a>
-<a class="btn-wa" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Plan%20(%E2%82%B93500).">BOOK ON WHATSAPP →</a>
+<a class="btn-wa" href="https://wa.me/916394313586?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Plan%20(%E2%82%B93500).">BOOK ON WHATSAPP →</a>
 </div>
 </div>
 
@@ -336,7 +349,7 @@ nav{display:none}
 </div>
 <div class="plan-btns">
 <a class="btn-upi" href="upi://pay?pa=ak8270494-1@okhdfcbank&pn=Trained%20By%20Sahib&am=7000&cu=INR">PAY ₹7,000 VIA UPI →</a>
-<a class="btn-wa" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Plan%20(%E2%82%B97000).">BOOK ON WHATSAPP →</a>
+<a class="btn-wa" href="https://wa.me/916394313586?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Plan%20(%E2%82%B97000).">BOOK ON WHATSAPP →</a>
 </div>
 </div>
 </div>
@@ -360,22 +373,4 @@ nav{display:none}
 <p style="font-size:14px;color:#d1d5db;margin-bottom:12px">"My deadlift jumped from 110 kg to 155 kg and bench technique improved completely. Best guidance for strength."</p>
 <strong style="color:#fff;font-size:14px">Faizal Khan</strong><br><small style="color:var(--gold)">Strength & Hypertrophy Client</small>
 </div>
-<div class="rev-card">
-<div class="stars">★★★★★</div>
-<p style="font-size:14px;color:#d1d5db;margin-bottom:12px">"As a complete beginner, everything was explained step-by-step and adjusted whenever my work schedule changed."</p>
-<strong style="color:#fff;font-size:14px">Rohit Kushwaha</strong><br><small style="color:var(--gold)">3 Months Coaching Plan</small>
-</div>
-</div>
-</div>
-</section>
-
-<section class="sec-alt">
-<div class="container">
-<div class="sec-head">
-<small>FAQ</small>
-<h2>FREQUENTLY ASKED QUESTIONS.</h2>
-</div>
-<div class="faq">
-<details><summary>1. Will my diet chart include normal Indian home food?</summary><p>Yes, every diet chart is built around everyday Indian meals based on your budget and veg/non-veg preference.</p></details>
-<details><summary>2. How quickly do I get my plan after payment?</summary><p>Once you pay via UPI and share the screenshot on WhatsApp (+91 63943 13576), your custom workout and diet plans are delivered within 24–48 hours.</p></details>
-<details><summary>3. Can complete beginners join?</summary><p>Yes, your workout routine is designed specifically for your current exper
+<div cl
