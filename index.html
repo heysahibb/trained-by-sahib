@@ -19,9 +19,9 @@ nav a{margin:0 12px;text-decoration:none;color:#374151;font-size:14px;font-weigh
 .header-actions{display:flex;align-items:center;gap:10px}
 .cart-btn{background:#fff;border:1.5px solid var(--navy);color:var(--navy);padding:9px 13px;border-radius:4px;cursor:pointer;font-weight:bold;font-size:13px;display:inline-flex;align-items:center;gap:6px}
 .cart-count{background:var(--navy);color:#fff;font-size:11px;padding:2px 6px;border-radius:10px}
-.btn{display:inline-block;background:var(--navy);color:#fff;padding:13px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;letter-spacing:0.5px;border:none;cursor:pointer}
+.btn{display:inline-block;background:var(--navy);color:#fff;padding:13px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;letter-spacing:0.5px;border:none;cursor:pointer;text-align:center}
 .btn:hover{background:var(--navy-dark)}
-.btn-outline{display:inline-block;border:2px solid var(--navy);color:var(--navy);padding:12px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px}
+.btn-outline{display:inline-block;border:2px solid var(--navy);color:var(--navy);padding:11px 20px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:13px;background:#fff;cursor:pointer;text-align:center}
 
 @keyframes fadeUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
 .hero-anim{animation:fadeUp 0.75s ease-out both}
@@ -62,12 +62,15 @@ section{padding:70px 7%}
 .plan h3{font-size:24px;margin:10px 0}
 .price{font-size:42px;font-weight:900;color:var(--navy);margin:8px 0 20px}
 .plan.popular .price{color:#fff}
-.plan ul{list-style:none;margin-bottom:28px;border-top:1px solid var(--border);padding-top:18px}
+.plan ul{list-style:none;margin-bottom:24px;border-top:1px solid var(--border);padding-top:18px}
 .plan.popular ul{border-color:rgba(255,255,255,0.18)}
 .plan li{padding:8px 0;font-size:14px;color:#374151}
 .plan.popular li{color:#e5e7eb}
-.plan .btn{text-align:center;width:100%}
+.plan-actions{display:flex;flex-direction:column;gap:10px}
+.plan .btn{width:100%}
 .plan.popular .btn{background:#fff;color:var(--navy)}
+.plan .btn-outline{width:100%}
+.plan.popular .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,0.4)}
 .story-box{background:var(--navy);color:#fff;padding:42px;border-radius:8px}
 .story-box strong{font-size:60px;display:block;line-height:1.1}
 .story-box p{color:#cbd5e1;margin-top:14px;font-size:15px}
@@ -238,7 +241,7 @@ section{padding:55px 6%}
 <div class="heading">
 <div class="tag">CHOOSE YOUR PLAN</div>
 <h2>INVEST IN YOUR STRENGTH.</h2>
-<p>Add your preferred coaching plan to cart and checkout directly.</p>
+<p>Select your plan to book directly on WhatsApp or add to cart.</p>
 </div>
 <div class="pricing">
 <div class="plan">
@@ -253,7 +256,10 @@ section{padding:55px 6%}
 <li>✓ WhatsApp Support</li>
 </ul>
 </div>
-<button type="button" class="btn add-plan-btn" data-name="1 Month Coaching Plan" data-price="2000">ADD TO CART • ₹2,000</button>
+<div class="plan-actions">
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Coaching%20Plan%20(%E2%82%B92000).">BOOK NOW ON WHATSAPP →</a>
+<button type="button" class="btn-outline add-plan-btn" data-name="1 Month Coaching Plan" data-price="2000">+ Add to Cart</button>
+</div>
 </div>
 
 <div class="plan popular">
@@ -268,7 +274,10 @@ section{padding:55px 6%}
 <li>✓ WhatsApp Support</li>
 </ul>
 </div>
-<button type="button" class="btn add-plan-btn" data-name="3 Months Coaching Plan" data-price="3500">ADD TO CART • ₹3,500</button>
+<div class="plan-actions">
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Coaching%20Plan%20(%E2%82%B93500).">BOOK NOW ON WHATSAPP →</a>
+<button type="button" class="btn-outline add-plan-btn" data-name="3 Months Coaching Plan" data-price="3500">+ Add to Cart</button>
+</div>
 </div>
 
 <div class="plan">
@@ -283,7 +292,10 @@ section{padding:55px 6%}
 <li>✓ WhatsApp Support</li>
 </ul>
 </div>
-<button type="button" class="btn add-plan-btn" data-name="6 Months Coaching Plan" data-price="10000">ADD TO CART • ₹10,000</button>
+<div class="plan-actions">
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Coaching%20Plan%20(%E2%82%B910000).">BOOK NOW ON WHATSAPP →</a>
+<button type="button" class="btn-outline add-plan-btn" data-name="6 Months Coaching Plan" data-price="10000">+ Add to Cart</button>
+</div>
 </div>
 </div>
 </section>
@@ -324,8 +336,8 @@ section{padding:55px 6%}
 <p>Every week we review your weight, measurements, workout performance, and form videos on WhatsApp so we can adjust your plan for continuous progress.</p>
 </details>
 <details>
-<summary>4. How do I get started after adding a plan to cart?</summary>
-<p>Click on "Proceed to WhatsApp" in your cart with your name and goal. Once we confirm your slot and payment, your custom plans are delivered within 24–48 hours.</p>
+<summary>4. How do I get started after selecting a plan?</summary>
+<p>Click on "Book Now on WhatsApp" under your chosen plan. Once we confirm your goals and payment, your custom workout and diet plans are delivered within 24–48 hours.</p>
 </details>
 </div>
 </section>
@@ -356,6 +368,10 @@ section{padding:55px 6%}
 
 <script>
 var selectedPlan = null;
+try {
+  var saved = localStorage.getItem("tbs_cart");
+  if (saved) selectedPlan = JSON.parse(saved);
+} catch (e) {}
 
 function openCart() {
   document.getElementById("cartDrawer").classList.add("open");
@@ -379,30 +395,4 @@ function updateCartUI() {
     footEl.style.display = "none";
   } else {
     countEl.textContent = "1";
-    bodyEl.innerHTML = '<div class="cart-item"><div><strong>' + selectedPlan.name + '</strong><small style="color:#4b5563">₹' + selectedPlan.price + ' • Custom Workout + Diet + Check-ins</small></div><button type="button" class="remove-btn" id="removePlanBtn">Remove</button></div>';
-    totalEl.textContent = "₹" + selectedPlan.price;
-    footEl.style.display = "block";
-    document.getElementById("removePlanBtn").onclick = function() {
-      selectedPlan = null;
-      updateCartUI();
-    };
-  }
-}
-
-document.getElementById("openCartBtn").onclick = openCart;
-document.getElementById("closeCartBtn").onclick = closeCart;
-document.getElementById("cartOverlay").onclick = closeCart;
-
-var planButtons = document.querySelectorAll(".add-plan-btn");
-for (var i = 0; i < planButtons.length; i++) {
-  planButtons[i].onclick = function() {
-    selectedPlan = {
-      name: this.getAttribute("data-name"),
-      price: this.getAttribute("data-price")
-    };
-    updateCartUI();
-    openCart();
-  };
-}
-
-document.getElementById("checkoutBtn").onclick = fun
+    bodyEl.innerHTML = '<div class="cart-item"><div><strong>' + select
