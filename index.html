@@ -21,7 +21,7 @@ nav a{margin:0 12px;text-decoration:none;color:#374151;font-size:14px;font-weigh
 .cart-count{background:var(--navy);color:#fff;font-size:11px;padding:2px 6px;border-radius:10px}
 .btn{display:inline-block;background:var(--navy);color:#fff;padding:13px 22px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;letter-spacing:0.5px;border:none;cursor:pointer;text-align:center}
 .btn:hover{background:var(--navy-dark)}
-.btn-upi{display:block;width:100%;background:var(--green);color:#fff;padding:14px 18px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;text-align:center;margin-bottom:10px;border:none;cursor:pointer}
+.btn-upi{display:block;width:100%;background:var(--green);color:#fff;padding:13px 18px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:14px;text-align:center;border:none;cursor:pointer}
 .btn-outline{display:inline-block;border:2px solid var(--navy);color:var(--navy);padding:11px 20px;text-decoration:none;font-weight:bold;border-radius:4px;font-size:13px;background:#fff;cursor:pointer;text-align:center}
 
 .hero{padding:70px 7%;display:grid;grid-template-columns:1.15fr 0.85fr;gap:45px;align-items:center;background:linear-gradient(115deg,#fff 62%,#f4f6fa 62%)}
@@ -65,13 +65,13 @@ section{padding:70px 7%}
 .plan li{padding:8px 0;font-size:14px;color:#374151}
 .plan.popular li{color:#e5e7eb}
 .plan-actions{display:flex;flex-direction:column;gap:10px}
-.plan .btn{width:100%}
+.plan .btn,.plan .btn-upi,.plan .btn-outline{width:100%}
 .plan.popular .btn{background:#fff;color:var(--navy)}
-.plan .btn-outline{width:100%}
 .plan.popular .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,0.45)}
-.upi-banner{margin-top:34px;padding:24px 28px;background:var(--grey);border:1px solid var(--border);border-radius:8px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
-.upi-id-box{background:#fff;border:1.5px dashed var(--navy);padding:10px 16px;border-radius:6px;font-weight:bold;color:var(--navy);font-size:15px;display:inline-flex;align-items:center;gap:12px}
-.copy-btn{background:var(--navy);color:#fff;border:none;padding:6px 12px;border-radius:4px;font-size:12px;font-weight:bold;cursor:pointer}
+.upi-banner{margin-top:34px;padding:22px;background:var(--grey);border:1px solid var(--border);border-radius:8px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px}
+.upi-id-box{background:#fff;border:1.5px dashed var(--navy);padding:10px 12px;border-radius:6px;font-weight:bold;color:var(--navy);font-size:13px;display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;max-width:340px}
+.upi-id-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:monospace;font-size:13px}
+.copy-btn{background:var(--navy);color:#fff;border:none;padding:7px 12px;border-radius:4px;font-size:12px;font-weight:bold;cursor:pointer;white-space:nowrap;flex-shrink:0}
 .story-box{background:var(--navy);color:#fff;padding:42px;border-radius:8px}
 .story-box strong{font-size:60px;display:block;line-height:1.1}
 .story-box p{color:#cbd5e1;margin-top:14px;font-size:15px}
@@ -95,7 +95,7 @@ footer{text-align:center;padding:28px 5%;background:var(--grey);color:#4b5563;fo
 .cart-head{padding:16px 20px;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center}
 .close-cart{background:none;border:none;color:#fff;font-size:26px;cursor:pointer;line-height:1}
 .cart-body{padding:20px}
-.upi-card{background:#f0fdf4;border:1px solid #86efac;padding:14px;border-radius:6px;font-size:13px;color:#166534;margin:14px 0}
+.upi-card{background:#f0fdf4;border:1px solid #86efac;padding:12px;border-radius:6px;font-size:13px;color:#166534;margin:14px 0}
 .cart-input{width:100%;padding:11px;border:1px solid var(--border);border-radius:4px;margin-bottom:10px;font-size:14px}
 
 @media(max-width:820px){
@@ -110,7 +110,7 @@ section{padding:55px 6%}
 </head>
 <body>
 
-<div class="topbar">ONLINE & OFFLINE PERSONAL COACHING • UPI PAYMENT & WHATSAPP SUPPORT</div>
+<div class="topbar">ONLINE & OFFLINE PERSONAL COACHING • DIRECT UPI & WHATSAPP BOOKING</div>
 
 <header>
 <div class="brand">
@@ -138,7 +138,7 @@ section{padding:55px 6%}
 </div>
 <div class="cart-body">
 <div id="emptyMsg" style="text-align:center;color:#6b7280;padding:20px 0">
-No plan selected yet.<br>Choose a coaching plan to pay or book.
+No plan saved in cart yet.<br>Select a coaching plan to pay or book.
 </div>
 <div id="filledCart" style="display:none">
 <div style="display:flex;justify-content:space-between;align-items:center;padding:12px;border:1px solid var(--border);border-radius:6px">
@@ -150,10 +150,10 @@ No plan selected yet.<br>Choose a coaching plan to pay or book.
 </div>
 
 <div class="upi-card">
-<strong style="display:block;color:#14532d;margin-bottom:4px">Pay Directly to Sahib's UPI ID:</strong>
-<div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px">
-<span style="font-weight:bold;font-size:14px">ak8270494-1@okhdfcbank</span>
-<button type="button" class="copy-btn" onclick="navigator.clipboard.writeText('ak8270494-1@okhdfcbank');this.textContent='Copied!'">Copy ID</button>
+<strong style="display:block;color:#14532d;margin-bottom:6px">Pay Directly to Sahib's UPI ID:</strong>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+<span class="upi-id-text">ak8270494-1@okhdfcbank</span>
+<button type="button" class="copy-btn" onclick="navigator.clipboard.writeText('ak8270494-1@okhdfcbank');this.textContent='Copied!'">Copy</button>
 </div>
 </div>
 
@@ -161,7 +161,7 @@ No plan selected yet.<br>Choose a coaching plan to pay or book.
 <input type="text" id="clientGoal" class="cart-input" placeholder="Your Goal (Fat Loss / Muscle / Powerlifting)">
 
 <a href="#" id="upiPayLink" class="btn-upi">PAY NOW VIA UPI APP →</a>
-<button type="button" class="btn" style="width:100%" onclick="sendOrderWA()">SEND SCREENSHOT ON WHATSAPP →</button>
+<button type="button" class="btn" style="width:100%;margin-top:8px" onclick="sendOrderWA()">SEND SCREENSHOT ON WHATSAPP →</button>
 <button type="button" style="width:100%;margin-top:8px;background:none;border:none;color:#b91c1c;font-size:12px;font-weight:bold;cursor:pointer" onclick="clearCart()">Remove Plan</button>
 </div>
 </div>
@@ -256,7 +256,7 @@ No plan selected yet.<br>Choose a coaching plan to pay or book.
 <div class="heading">
 <div class="tag">CHOOSE YOUR PLAN</div>
 <h2>INVEST IN YOUR STRENGTH.</h2>
-<p>Add your plan to cart to pay directly via UPI or book on WhatsApp.</p>
+<p>Pay directly via UPI App, book on WhatsApp, or save your plan to cart.</p>
 </div>
 <div class="pricing">
 <div class="plan">
@@ -272,8 +272,9 @@ No plan selected yet.<br>Choose a coaching plan to pay or book.
 </ul>
 </div>
 <div class="plan-actions">
-<button type="button" class="btn" onclick="selectPlan('1 Month Coaching Plan', 2000)">PAY / ADD TO CART • ₹2,000</button>
-<a class="btn-outline" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Coaching%20Plan%20(%E2%82%B92000).">Book via WhatsApp →</a>
+<a class="btn-upi" href="upi://pay?pa=ak8270494-1@okhdfcbank&pn=Trained%20By%20Sahib&am=2000&cu=INR">PAY ₹2,000 VIA UPI APP →</a>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Coaching%20Plan%20(%E2%82%B92000).">BOOK ON WHATSAPP →</a>
+<button type="button" class="btn-outline" onclick="selectPlan('1 Month Coaching Plan', 2000)">+ Save to Cart</button>
 </div>
 </div>
 
@@ -290,8 +291,9 @@ No plan selected yet.<br>Choose a coaching plan to pay or book.
 </ul>
 </div>
 <div class="plan-actions">
-<button type="button" class="btn" onclick="selectPlan('3 Months Coaching Plan', 3500)">PAY / ADD TO CART • ₹3,500</button>
-<a class="btn-outline" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Coaching%20Plan%20(%E2%82%B93500).">Book via WhatsApp →</a>
+<a class="btn-upi" href="upi://pay?pa=ak8270494-1@okhdfcbank&pn=Trained%20By%20Sahib&am=3500&cu=INR">PAY ₹3,500 VIA UPI APP →</a>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Coaching%20Plan%20(%E2%82%B93500).">BOOK ON WHATSAPP →</a>
+<button type="button" class="btn-outline" onclick="selectPlan('3 Months Coaching Plan', 3500)">+ Save to Cart</button>
 </div>
 </div>
 
@@ -308,8 +310,9 @@ No plan selected yet.<br>Choose a coaching plan to pay or book.
 </ul>
 </div>
 <div class="plan-actions">
-<button type="button" class="btn" onclick="selectPlan('6 Months Coaching Plan', 7000)">PAY / ADD TO CART • ₹7,000</button>
-<a class="btn-outline" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Coaching%20Plan%20(%E2%82%B97000).">Book via WhatsApp →</a>
+<a class="btn-upi" href="upi://pay?pa=ak8270494-1@okhdfcbank&pn=Trained%20By%20Sahib&am=7000&cu=INR">PAY ₹7,000 VIA UPI APP →</a>
+<a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Coaching%20Plan%20(%E2%82%B97000).">BOOK ON WHATSAPP →</a>
+<button type="button" class="btn-outline" onclick="selectPlan('6 Months Coaching Plan', 7000)">+ Save to Cart</button>
 </div>
 </div>
 </div>
@@ -320,8 +323,8 @@ No plan selected yet.<br>Choose a coaching plan to pay or book.
 <span style="color:#4b5563;font-size:13px">Pay directly to Sahib's UPI ID & share payment screenshot on WhatsApp (+91 63943 13576)</span>
 </div>
 <div class="upi-id-box">
-<span>ak8270494-1@okhdfcbank</span>
-<button type="button" class="copy-btn" onclick="navigator.clipboard.writeText('ak8270494-1@okhdfcbank');this.textContent='Copied!'">Copy UPI ID</button>
+<span class="upi-id-text">ak8270494-1@okhdfcbank</span>
+<button type="button" class="copy-btn" onclick="navigator.clipboard.writeText('ak8270494-1@okhdfcbank');this.textContent='Copied!'">Copy ID</button>
 </div>
 </div>
 </section>
@@ -360,16 +363,4 @@ No plan selected yet.<br>Choose a coaching plan to pay or book.
 <details>
 <summary>3. How do weekly check-ins and WhatsApp support work?</summary>
 <p>Every week we review your weight, measurements, workout performance, and form videos on WhatsApp so we can adjust your plan for continuous progress.</p>
-</details>
-<details>
-<summary>4. How do I pay online and start my coaching?</summary>
-<p>Select your plan and click "Pay Now via UPI App" or pay directly to <strong>ak8270494-1@okhdfcbank</strong>. Share the payment screenshot on WhatsApp (+91 63943 13576) and your custom plans will be delivered within 24–48 hours.</p>
-</details>
-</div>
-</section>
-
-<section class="cta">
-<div>
-<div class="tag" style="color:#93c5fd">TRAINED BY SAHIB</div>
-<h2>DISCIPLINE TODAY.<br>STRENGTH FOR LIFE.</h2>
-<p>Your fitness journey starts with one decisio
+</deta
