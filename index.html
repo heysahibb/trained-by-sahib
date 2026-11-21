@@ -55,14 +55,14 @@ section{padding:60px 6%}
 .for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .for-item{padding:18px;border:1px solid var(--border);background:#fff;border-radius:8px;font-weight:bold;color:var(--navy);font-size:14px}
 .for-item span{color:var(--gold);margin-right:6px}
-.calc-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:26px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:24px;align-items:center}
+.calc-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;max-width:760px;display:flex;flex-direction:column;gap:20px}
 .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
 .calc-field label{display:block;font-size:11px;font-weight:bold;color:var(--navy);margin-bottom:5px;text-transform:uppercase}
-.calc-field input,.calc-field select{width:100%;padding:11px;border:1px solid var(--border);border-radius:6px;font-size:14px;background:var(--ivory)}
+.calc-field input,.calc-field select{width:100%;padding:11px;border:1px solid var(--border);border-radius:6px;font-size:14px;background:var(--ivory);color:#111827}
 .calc-res{background:var(--navy);color:#fff;padding:24px;border-radius:10px;border:1.5px solid var(--gold)}
 .calc-res h4{font-size:11px;letter-spacing:1.8px;color:var(--gold-l);margin-bottom:14px}
-.calc-met{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.18)}
-.calc-met strong{display:block;font-size:21px;font-weight:900;color:var(--gold-l)}
+.calc-met{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.18)}
+.calc-met strong{display:block;font-size:24px;font-weight:900;color:var(--gold-l)}
 .calc-met span{font-size:11px;color:#cbd5e1}
 .step-card{text-align:center;padding:28px 20px}
 .step-num{width:38px;height:38px;background:var(--gold);color:#fff;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;margin-bottom:6px}
@@ -108,7 +108,7 @@ footer{text-align:center;padding:24px 5% 80px;background:var(--sage);color:#4b55
 .wa-float{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;padding:12px 16px;border-radius:50px;font-weight:bold;font-size:13px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;box-shadow:0 8px 20px rgba(0,0,0,0.2);z-index:50}
 @media(max-width:820px){
 nav{display:none}
-.hero,.split,.grid-3,.for-grid,.calc-box,.pricing,.contact{grid-template-columns:1fr}
+.hero,.split,.grid-3,.for-grid,.pricing,.contact{grid-template-columns:1fr}
 .hero{padding:40px 5%}
 section{padding:50px 5%}
 .photo-box img{height:240px}
@@ -218,33 +218,33 @@ section{padding:50px 5%}
 <div class="calc-box">
 <div>
 <div class="calc-grid">
-<div class="calc-field"><label>Weight (kg)</label><input type="number" id="wInput" value="70" min="30" max="200"></div>
-<div class="calc-field"><label>Height (cm)</label><input type="number" id="hInput" value="170" min="120" max="220"></div>
+<div class="calc-field"><label>Weight (kg)</label><input type="number" id="wInput" value="70" oninput="runCalc()"></div>
+<div class="calc-field"><label>Height (cm)</label><input type="number" id="hInput" value="170" oninput="runCalc()"></div>
 <div class="calc-field"><label>Activity Level</label>
-<select id="actInput">
+<select id="actInput" onchange="runCalc()">
 <option value="1.35">Light (1-2 days/wk)</option>
 <option value="1.55" selected>Moderate (3-5 days/wk)</option>
 <option value="1.75">Heavy (6 days/wk)</option>
 </select>
 </div>
 <div class="calc-field"><label>Your Goal</label>
-<select id="goalInput">
+<select id="goalInput" onchange="runCalc()">
 <option value="fatloss">Fat Loss</option>
 <option value="maintain">Maintain</option>
 <option value="muscle">Muscle Gain</option>
 </select>
 </div>
 </div>
-<button type="button" class="btn" style="width:100%" onclick="calcFitness()">CALCULATE MY TARGET →</button>
+<button type="button" class="btn" style="width:100%" onclick="runCalc()">CALCULATE MY TARGET →</button>
 </div>
 <div class="calc-res">
 <h4>YOUR ESTIMATED DAILY TARGET</h4>
 <div class="calc-met">
 <div><strong id="bmiVal">24.2</strong><span>BMI Score</span></div>
-<div><strong id="calVal">1,950</strong><span>Calories / Day</span></div>
-<div><strong id="proVal">125g</strong><span>Protein / Day</span></div>
+<div><strong id="calVal">1937 kcal</strong><span>Calories / Day</span></div>
+<div><strong id="proVal">140 g</strong><span>Protein / Day</span></div>
 </div>
-<p id="bmiNote" style="font-size:13px;color:#e5e7eb;margin-bottom:14px">Healthy Weight Range • Ready for lean muscle or fat loss.</p>
+<p id="bmiNote" style="font-size:13px;color:#e5e7eb;margin-bottom:14px">Healthy Weight Range • Estimated daily nutrition target.</p>
 <a id="calcWaLink" class="btn" style="width:100%;font-size:12px;background:#fff;color:var(--navy)" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20checked%20my%20calorie%20target%20on%20your%20website%20and%20want%20a%20custom%20plan.">GET CUSTOM DIET PLAN ON WHATSAPP →</a>
 </div>
 </div>
@@ -362,4 +362,4 @@ section{padding:50px 5%}
 <div class="card">
 <div class="stars">★★★★★</div>
 <p class="rev-txt">"As a complete beginner, I had zero idea about workouts or diet. Everything was explained step-by-step and adjusted for my routine."</p>
-<div class="rev-name">Rohit Kushwa
+<
