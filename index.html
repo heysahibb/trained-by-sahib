@@ -1,151 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#050507">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<link rel="manifest" href="manifest.json">
-<title>TRAINED BY SAHIB | Online Fitness & Transformation Coaching</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#09090b">
+<title>TRAINED BY SAHIB | Elite Online & Offline Body Transformation Coaching</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:radial-gradient(circle at top,#16130b 0%,#050507 55%,#020203 100%);--txt:#f5f5f7;--hd-c:#ffffff;--sub:#d4d4d8;--m:#a1a1aa;--c:linear-gradient(145deg,#181612,#09090b);--pop:linear-gradient(160deg,#241e0d,#09090b);--top-bg:linear-gradient(90deg,#090805,#1f1909,#090805);--hdr-bg:rgba(6,6,8,0.95);--btn-bg:#12110e;--btn-t:#e4e4e7;--st-bg:#070709;--inp-bg:#070709;--ftr-bg:#030304;--g:linear-gradient(135deg,#fde047,#eab308,#ca8a04);--gd:#eab308;--gl:#fde047;--bd:rgba(234,179,8,0.35);--sh:inset 0 1px 0 rgba(253,224,71,0.14),0 10px 25px rgba(0,0,0,0.65);--bo-bg:rgba(234,179,8,0.08)}
-@media(prefers-color-scheme:light){:root{--bg:linear-gradient(180deg,#ffffff 0%,#f4f4f6 100%);--txt:#111113;--hd-c:#09090b;--sub:#27272a;--m:#52525b;--c:linear-gradient(145deg,#ffffff,#f8f8fa);--pop:linear-gradient(160deg,#fefce8,#ffffff);--top-bg:linear-gradient(90deg,#09090b,#1f1a0d,#09090b);--hdr-bg:rgba(255,255,255,0.96);--btn-bg:#f4f4f5;--btn-t:#111113;--st-bg:#f4f4f5;--inp-bg:#ffffff;--ftr-bg:#09090b;--gd:#ca8a04;--gl:#b45309;--bd:rgba(202,138,4,0.42);--sh:0 8px 22px rgba(0,0,0,0.08);--bo-bg:rgba(234,179,8,0.14)}}
-body{font-family:Arial,sans-serif;color:var(--txt);background:var(--bg);line-height:1.5;overflow-x:hidden;min-height:100vh}
-.top{background:var(--top-bg);color:#fde047;text-align:center;padding:7px 4%;font-size:11px;letter-spacing:1.2px;font-weight:700;border-bottom:1px solid var(--bd)}
-header{padding:12px 4%;background:var(--hdr-bg);border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:40;backdrop-filter:blur(8px)}
-.nav-top{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto 10px}
-.br{display:flex;align-items:center;gap:9px;font-weight:900;color:var(--hd-c);font-size:17px;letter-spacing:.5px}.br img{height:38px;width:auto;object-fit:contain;background:transparent}@media(prefers-color-scheme:light){.br img{filter:invert(1) hue-rotate(180deg)}}.br span{background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.menu{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:1100px;margin:0 auto}
-.m-btn{background:var(--btn-bg);border:1px solid var(--bd);color:var(--btn-t);padding:7px 12px;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer}
-.m-btn.act{background:var(--g);color:#090805;border-color:transparent;font-weight:900}
-.page{display:none;padding:34px 5% 60px;max-width:1100px;margin:0 auto;animation:fade .25s ease}.page.act{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.btn,.bu{display:inline-block;background:var(--g);color:#090805;padding:11px 16px;border-radius:8px;text-decoration:none;font-weight:900;font-size:13px;border:none;cursor:pointer;text-align:center;box-shadow:0 4px 15px rgba(234,179,8,0.22)}.bu{display:block;width:100%}
-.bo,.bw{display:inline-block;border:1.5px solid var(--gd);color:var(--gl);padding:10px 15px;border-radius:8px;text-decoration:none;font-weight:800;font-size:13px;background:var(--bo-bg);text-align:center}.bw{display:block;width:100%}
-.hd{margin-bottom:20px}.hd small{color:var(--gd);font-weight:800;letter-spacing:1.4px;font-size:11px}.hd h2{font-size:clamp(22px,4vw,32px);font-weight:900;color:var(--hd-c);margin:4px 0 6px}.hd p{color:var(--m);font-size:14px}
-.g2{display:grid;grid-template-columns:1.15fr 0.85fr;gap:20px;align-items:center}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.g2c{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.pill{display:inline-block;background:rgba(234,179,8,0.15);border:1px solid var(--bd);color:var(--gl);font-size:11px;font-weight:800;padding:4px 11px;border-radius:20px;margin-bottom:10px}
-h1{font-size:clamp(28px,5vw,44px);line-height:1.12;font-weight:900;color:var(--hd-c);margin-bottom:10px}h1 span{background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-.cd,.pl,.tc,.ctc,.rv{background:var(--c);border:1px solid var(--bd);border-radius:12px;padding:18px;box-shadow:var(--sh)}
-.cd h3,.pl h3,.tc h3,.ctc h3,.rv strong{color:var(--hd-c)}.sub-t{color:var(--sub);font-size:14px}
-.st{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--st-bg);padding:10px 4px;border-radius:8px;text-align:center;margin:12px 0;border:1px solid var(--bd)}.st strong{display:block;color:var(--gl);font-size:13px}.st small{color:var(--m);font-size:11px}
-.pl{display:flex;flex-direction:column;justify-content:space-between}.pl.pop{background:var(--pop);border:2px solid var(--gd)}.pt{background:var(--g);color:#090805;font-size:10px;font-weight:900;padding:3px 9px;border-radius:10px;display:inline-block;margin-bottom:6px}
-.pr{font-size:32px;font-weight:900;margin:4px 0 12px;color:var(--gl)}.pl ul{list-style:none;border-top:1px solid var(--bd);padding-top:10px;margin-bottom:14px}.pl li{padding:4px 0;font-size:13px;color:var(--sub)}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}.gal img{width:100%;height:auto;border-radius:10px;border:1.5px solid var(--bd);display:block;background:#0d0c0a;box-shadow:0 8px 20px rgba(0,0,0,0.35)}
-.p-wrap{width:125px;height:125px;border-radius:50%;overflow:hidden;border:2.5px solid var(--gd);background:#181612;margin-bottom:14px;box-shadow:0 0 18px rgba(234,179,8,0.28)}
-.p-img{width:100%;height:100%;object-fit:cover;object-position:center 68%;transform:scale(1.25)}
-.tg{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 14px}.tg span{background:var(--bo-bg);border:1px solid var(--bd);color:var(--gl);font-size:11px;font-weight:700;padding:4px 8px;border-radius:5px}
-.frm input,.frm select,.frm textarea{width:100%;padding:11px;margin-bottom:11px;border:1px solid var(--bd);border-radius:7px;background:var(--inp-bg);color:var(--txt);font-size:13px}
-footer{background:var(--ftr-bg);color:#a1a1aa;text-align:center;padding:22px 5% 80px;font-size:13px;border-top:1px solid var(--bd)}footer a{color:#fde047;text-decoration:none}
-.wa{position:fixed;right:15px;bottom:15px;background:#25d366;color:#fff;padding:11px 15px;border-radius:50px;font-weight:700;font-size:13px;text-decoration:none;z-index:50;box-shadow:0 4px 14px rgba(0,0,0,0.45)}
-@media(max-width:850px){.g2,.g3,.g2c,.gal{grid-template-columns:1fr}}
+:root{--bg:#09090b;--bg2:#121216;--card:#16161b;--ink:#ffffff;--sub:#d4d4d8;--m:#a1a1aa;--g1:#eab308;--g2:#f59e0b;--red:#ef4444;--grad:linear-gradient(135deg,#f59e0b,#d97706,#b45309);--bd:rgba(234,179,8,0.28);--sh:0 16px 40px rgba(0,0,0,0.65)}
+html{scroll-behavior:smooth}
+body{font-family:'Arial Black',Impact,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.5}
+.sans{font-family:'Segoe UI',Arial,sans-serif}
+/* CENTERED TOP LOGO HEADER */
+header{background:rgba(9,9,11,0.96);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--bd);padding:16px 5%;text-align:center;position:sticky;top:0;z-index:50}
+.logo-center{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:var(--ink);gap:6px}
+.logo-center img{height:58px;width:auto;object-fit:contain;display:block;margin:0 auto}
+.logo-txt{font-size:18px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase}.logo-txt span{color:var(--g1)}
+/* SECTIONS & TYPOGRAPHY */
+section{padding:56px 5%;max-width:1040px;margin:0 auto;text-align:center}
+.pill{display:inline-block;background:rgba(234,179,8,0.12);border:1px solid var(--bd);color:var(--g1);font-size:11.5px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;padding:6px 14px;border-radius:4px;margin-bottom:16px}
+h1{font-size:clamp(34px,6.5vw,64px);font-weight:900;line-height:1.03;text-transform:uppercase;letter-spacing:-.5px;margin-bottom:14px}
+h1 span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.pillars{font-size:clamp(12px,2vw,15px);font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:var(--g1);margin:14px 0 26px}
+.cta{display:inline-block;background:var(--grad);color:#09090b;padding:16px 34px;border-radius:6px;font-weight:900;font-size:15px;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:.25s;box-shadow:0 8px 28px rgba(245,158,11,0.38)}
+.cta:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 36px rgba(245,158,11,0.55)}
+.hero-media{max-width:460px;margin:34px auto 0;border-radius:12px;overflow:hidden;border:2px solid var(--g1);box-shadow:var(--sh);background:var(--card)}
+.hero-media img{width:100%;height:auto;display:block}
+.div-line{height:1px;background:linear-gradient(90deg,transparent,var(--bd),transparent);max-width:900px;margin:0 auto}
+h2{font-size:clamp(28px,5vw,48px);font-weight:900;line-height:1.08;text-transform:uppercase;margin-bottom:12px}
+h2 span{color:var(--g1)}
+.sub-p{color:var(--sub);font-size:15.5px;max-width:680px;margin:0 auto 28px}
+/* GUARANTEE BANNER */
+.guar-box{background:linear-gradient(135deg,#18181f 0%,#0f0f13 100%);border:2px solid var(--g1);border-radius:14px;padding:42px 24px;box-shadow:var(--sh)}
+/* CARDS & GRIDS */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left;margin:30px 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:22px;text-align:left;margin:30px 0}
+.card{background:var(--card);border:1.5px solid var(--bd);border-top:4px solid var(--g1);border-radius:10px;padding:26px;box-shadow:var(--sh)}
+.card h3{font-size:19px;font-weight:900;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.card p{color:var(--sub);font-size:14px}
+/* TRANSFORMATION PROOF GRID */
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
+.res-card{background:var(--card);border:1.5px solid var(--bd);border-radius:10px;padding:20px;text-align:center}
+.res-tag{display:inline-block;background:var(--g1);color:#09090b;font-size:11px;font-weight:900;padding:4px 10px;border-radius:4px;text-transform:uppercase;margin-bottom:10px}
+/* COACH SECTION */
+.coach-wrap{background:var(--card);border:2px solid var(--bd);border-radius:14px;padding:34px 26px;display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center;text-align:left;box-shadow:var(--sh)}
+.coach-wrap img{width:100%;height:auto;border-radius:10px;border:2px solid var(--g1);display:block;margin:0 auto}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}.badges span{background:rgba(234,179,8,0.12);border:1px solid var(--bd);color:var(--g1);font-size:11px;font-weight:800;padding:5px 10px;border-radius:4px;text-transform:uppercase}
+/* APPLICATION FORM */
+.form-box{max-width:620px;margin:0 auto;background:var(--card);border:2px solid var(--g1);border-radius:14px;padding:32px 24px;text-align:left;box-shadow:var(--sh)}
+label{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--g1);margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;margin-bottom:16px;background:var(--bg);border:1.5px solid var(--bd);border-radius:6px;color:var(--ink);font-size:14px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--g1)}
+footer{background:#050507;color:var(--m);text-align:center;padding:34px 5% 50px;font-size:13px;border-top:1.5px solid var(--bd)}footer a{color:var(--g1);text-decoration:none;font-weight:700}
+@media(max-width:850px){.g3,.g2,.res-grid,.coach-wrap{grid-template-columns:1fr}.coach-wrap{text-align:center}.badges{justify-content:center}}
 </style>
 </head>
-<body>
-<div class="top">TRAINED BY SAHIB • ACE CERTIFIED ONLINE FITNESS & TRANSFORMATION COACHING</div>
+<body class="sans">
+<!-- CENTERED LOGO HEADER (LIKE SHREDDED KRISHNA) -->
 <header>
-<div class="nav-top"><div class="br"><img src="Logoo.png" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Logoo.jpg';}else{this.style.display='none';}" alt="Logo"><div>TRAINED BY <span>SAHIB</span></div></div><button class="btn" style="padding:7px 12px;font-size:12px" onclick="openPage('inquiry')">START NOW</button></div>
-<div class="menu">
-<button class="m-btn act" id="b-home" onclick="openPage('home')">Home</button>
-<button class="m-btn" id="b-plans" onclick="openPage('plans')">Packages</button>
-<button class="m-btn" id="b-gallery" onclick="openPage('gallery')">Gallery</button>
-<button class="m-btn" id="b-about" onclick="openPage('about')">About</button>
-<button class="m-btn" id="b-reviews" onclick="openPage('reviews')">Reviews</button>
-<button class="m-btn" id="b-inquiry" onclick="openPage('inquiry')">Inquiry</button>
-<button class="m-btn" id="b-contact" onclick="openPage('contact')">Contact</button>
-</div>
+<a href="#top" class="logo-center">
+<img src="Logo.png" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Logo.PNG';}else{this.style.display='none';}" alt="Trained By Sahib Logo">
+<div class="logo-txt">TRAINED BY <span>SAHIB</span></div>
+</a>
 </header>
-<!-- 1. HOME PAGE -->
-<div id="p-home" class="page act">
-<div class="g2" style="margin-bottom:28px"><div><div class="pill">★ 1-ON-1 PERSONALIZED ONLINE COACHING</div><h1>TRANSFORM YOUR PHYSIQUE WITH <span>SCIENCE & DISCIPLINE.</span></h1><p class="sub-t" style="margin-bottom:14px">No cookie-cutter templates or crash diets. Get customized Indian diet plans, structured hypertrophy & strength workouts, and weekly accountability tailored to your exact lifestyle.</p><div class="btns"><button class="btn" onclick="openPage('plans')">VIEW COACHING PACKAGES →</button><button class="bo" onclick="openPage('inquiry')">BOOK FREE CONSULTATION</button></div></div>
-<div class="cd"><small style="color:var(--gd);font-weight:800">COACHING OVERVIEW</small><h3 style="margin:4px 0">Trained By Sahib</h3><p style="color:var(--m);font-size:13px">Fat Loss • Muscle Hypertrophy • Strength & Powerlifting</p><div class="st"><div><strong>5+ Years</strong><small>Experience</small></div><div><strong>ACE Certified</strong><small>Fitness Coach</small></div><div><strong>100% Custom</strong><small>Diet & Training</small></div></div><button class="btn" style="width:100%" onclick="openPage('about')">MEET YOUR COACH →</button></div></div>
-<div class="hd"><small>WHAT YOU GET</small><h2>COMPLETE TRANSFORMATION SYSTEM</h2></div>
-<div class="g3">
-<div class="cd"><h3>🥗 Customized Indian Diet</h3><p style="color:var(--m);font-size:13px">Calculated macros and calories using home-cooked Indian meals that fit your budget and routine.</p></div>
-<div class="cd"><h3>🏋️ Structured Workout Plan</h3><p style="color:var(--m);font-size:13px">Progressive overload training splits designed around your gym equipment and recovery capacity.</p></div>
-<div class="cd"><h3>📲 Weekly Check-Ins & Form Review</h3><p style="color:var(--m);font-size:13px">Direct WhatsApp support, video form corrections, and weekly adjustments to break plateaus.</p></div>
-</div></div>
 
-<!-- 2. PACKAGES PAGE -->
-<div id="p-plans" class="page">
-<div class="hd"><small>COACHING PACKAGES</small><h2>CHOOSE YOUR TRANSFORMATION PLAN.</h2><p>Direct 1-on-1 coaching with Sahib Khan. After UPI payment, send a screenshot on WhatsApp to start within 24 hours.</p></div>
-<div class="g3">
-<div class="pl"><div><small style="color:var(--gd);font-weight:800">STARTER</small><h3>1 Month Coaching</h3><div class="pr">₹2,000</div><ul><li>✓ Custom Diet & Workout Plan</li><li>✓ Weekly WhatsApp Check-Ins</li><li>✓ Exercise Form Video Review</li><li>✓ Supplement Guidance</li></ul></div><div><a class="bu" style="margin-bottom:8px" href="upi://pay?pa=ak8270494-1@okhdfcbank&pn=Sahib%20Khan&am=2000&cu=INR">PAY ₹2,000 VIA UPI</a><a class="bw" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%201%20Month%20Coaching%20Plan%20(%E2%82%B92000).">BOOK ON WHATSAPP →</a></div></div>
-<div class="pl pop"><div><span class="pt">MOST POPULAR</span><h3>3 Months Transformation</h3><div class="pr">₹3,500</div><ul><li>✓ Full 12-Week Body Recomposition</li><li>✓ Bi-Weekly Diet & Macro Adjustments</li><li>✓ Priority WhatsApp & Call Support</li><li>✓ Detailed Form & Strength Tracking</li></ul></div><div><a class="bu" style="margin-bottom:8px" href="upi://pay?pa=ak8270494-1@okhdfcbank&pn=Sahib%20Khan&am=3500&cu=INR">PAY ₹3,500 VIA UPI</a><a class="bw" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%203%20Months%20Transformation%20Plan%20(%E2%82%B93500).">BOOK ON WHATSAPP →</a></div></div>
-<div class="pl"><div><small style="color:var(--gd);font-weight:800">ELITE</small><h3>6 Months Complete Overhaul</h3><div class="pr">₹7,000</div><ul><li>✓ Complete Fat-to-Fit Lifestyle Shift</li><li>✓ Unlimited Plan Updates & Support</li><li>✓ 1-on-1 Progress & Strength Coaching</li><li>✓ Sustainable Maintenance Roadmap</li></ul></div><div><a class="bu" style="margin-bottom:8px" href="upi://pay?pa=ak8270494-1@okhdfcbank&pn=Sahib%20Khan&am=7000&cu=INR">PAY ₹7,000 VIA UPI</a><a class="bw" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20join%20the%206%20Months%20Elite%20Plan%20(%E2%82%B97000).">BOOK ON WHATSAPP →</a></div></div>
-</div></div>
+<!-- 1. HERO FUNNEL SECTION -->
+<section id="top">
+<div class="pill">ACE CERTIFIED COACH • 5+ YEARS EXPERIENCE</div>
+<h1>BECOME THE <span>ELITE 1%</span><br>WITH SAHIB KHAN</h1>
+<div class="pillars">FAT TO FIT &nbsp;|&nbsp; MUSCLE GAIN &nbsp;|&nbsp; LIFESTYLE TRANSFORMATION</div>
+<a href="#apply" class="cta">YES, I'M READY! →</a>
 
-<!-- 3. GALLERY PAGE -->
-<div id="p-gallery" class="page">
-<div class="hd"><small>PHYSIQUE & TRAINING GALLERY</small><h2>TRAINING, STRENGTH & RESULTS.</h2><p>Full-size snapshots from training sessions, powerlifting lifts, and coaching journey.</p></div>
-<div class="gal">
-<img src="Coach.JPG" alt="Coach Sahib Khan">
-<img src="Pic%201.jpg" alt="Training Gallery 1">
-<img src="Pic%202.JPG" alt="Training Gallery 2">
-<img src="Pic%203.jpg" alt="Training Gallery 3">
-<img src="Pic%204.jpg" alt="Training Gallery 4">
-<img src="Pic%205.JPG" alt="Training Gallery 5">
-</div></div>
-<!-- 4. ABOUT PAGE -->
-<div id="p-about" class="page">
-<div class="hd"><small>ABOUT YOUR COACH</small><h2>MEET SAHIB KHAN.</h2></div>
-<div class="tc" style="max-width:720px">
-<div class="p-wrap"><img class="p-img" src="Coach.JPG" alt="Sahib Khan"></div>
-<small style="color:var(--gd);font-weight:800;display:block">ACE CERTIFIED PERSONAL TRAINER & ONLINE COACH</small>
-<h3 style="font-size:26px;margin:4px 0">Sahib Khan</h3>
-<p style="color:var(--gl);font-size:13px;font-weight:700;margin-bottom:12px">5+ Years of Gym & Strength Experience • American Council on Exercise (ACE) Certified</p>
-<div class="tg"><span>Body Transformation</span><span>Fat Loss & Hypertrophy</span><span>Custom Indian Nutrition</span><span>Powerlifting (SBD)</span></div>
-<p class="sub-t" style="margin-bottom:12px">I am a certified fitness coach and strength athlete dedicated to helping busy students, professionals, and beginners build a strong, lean, and confident physique without extreme starvation or confusing routines.</p>
-<p class="sub-t" style="margin-bottom:16px">Whether your goal is dropping stubborn body fat, gaining lean muscle mass, or increasing your Squat, Bench Press, and Deadlift numbers, every plan is built specifically around your body type, food preferences, and schedule.</p>
-<div class="btns"><a class="btn" href="https://www.instagram.com/trainedbysahib_" target="_blank">@TRAINEDBYSAHIB_ →</a><a class="bo" href="https://www.instagram.com/heyysahibb?hvrq=NHc1Y3J4bTRzOGwy" target="_blank">@HEYYSAHIBB →</a></div>
-</div></div>
-
-<!-- 5. REVIEWS PAGE -->
-<div id="p-reviews" class="page">
-<div class="hd"><small>CLIENT TESTIMONIALS</small><h2>REAL REVIEWS & FEEDBACK.</h2><p>Read what clients say about Trained By Sahib, or submit your own review below.</p></div>
-<div class="g3" id="revList" style="margin-bottom:26px">
-<div class="rv"><div style="color:var(--gl);margin-bottom:6px">★★★★★</div><p class="sub-t" style="font-size:13px;margin-bottom:10px">"My deadlift jumped from 110 kg to 155 kg with Sahib's structured programming and form corrections. Best coaching experience!"</p><strong>Faizal Khan</strong><br><small style="color:var(--gd)">Strength & Powerlifting Client</small></div>
-<div class="rv"><div style="color:var(--gl);margin-bottom:6px">★★★★★</div><p class="sub-t" style="font-size:13px;margin-bottom:10px">"Simple home-based Indian diet plan that actually works. Lost 8 kg in 3 months without feeling weak or starved."</p><strong>Aman Verma</strong><br><small style="color:var(--gd)">3-Month Transformation</small></div>
-<div class="rv"><div style="color:var(--gl);margin-bottom:6px">★★★★★</div><p class="sub-t" style="font-size:13px;margin-bottom:10px">"Weekly check-ins kept me disciplined every single week. Highly recommended for anyone serious about fitness."</p><strong>Rohit Kushwaha</strong><br><small style="color:var(--gd)">Online Coaching Client</small></div>
+<div class="hero-media">
+<img src="Coach.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Coach.jpg';}else{this.style.display='none';}" alt="Sahib Khan Transformation Coach">
 </div>
-<div class="ctc frm" style="max-width:560px">
-<h3 style="margin-bottom:10px">Write a Review</h3>
-<input type="text" id="rName" placeholder="Your Name">
-<select id="rStar"><option value="★★★★★">★★★★★ (5/5 - Excellent)</option><option value="★★★★☆">★★★★☆ (4/5 - Great)</option><option value="★★★☆☆">★★★☆☆ (3/5 - Good)</option></select>
-<input type="text" id="rGoal" placeholder="Your Program (e.g., Fat Loss, Muscle Gain, 3 Months Plan)">
-<textarea id="rText" rows="3" placeholder="Share your experience with Trained By Sahib..."></textarea>
-<button type="button" class="bu" onclick="addReview()">POST REVIEW →</button>
-</div></div>
+<div style="margin-top:26px">
+<a href="#apply" class="cta">YES, I'M READY! →</a>
+</div>
+</section>
 
-<!-- 6. INQUIRY PAGE -->
-<div id="p-inquiry" class="page">
-<div class="hd"><small>COACHING INQUIRY</small><h2>APPLY FOR 1-ON-1 COACHING.</h2><p>Fill out your details below—your application will open directly in WhatsApp so we can discuss your goals.</p></div>
-<div class="ctc frm" style="max-width:560px">
-<input type="text" id="eN" placeholder="Your Full Name">
-<input type="tel" id="eP" placeholder="Your WhatsApp / Phone Number">
-<input type="text" id="eW" placeholder="Current Age, Height & Weight (e.g., 22 yrs, 170 cm, 72 kg)">
-<select id="eM"><option>1 Month Coaching - ₹2,000</option><option>3 Months Transformation - ₹3,500</option><option>6 Months Complete Overhaul - ₹7,000</option></select>
-<textarea id="eG" rows="3" placeholder="Your Primary Fitness Goal (Fat Loss, Muscle Building, Strength...)"></textarea>
-<button type="button" class="bu" onclick="sendEnq()">SUBMIT INQUIRY ON WHATSAPP →</button>
-</div></div>
+<div class="div-line"></div>
 
-<!-- 7. CONTACT PAGE -->
-<div id="p-contact" class="page">
-<div class="hd"><small>GET IN TOUCH</small><h2>DIRECT CONTACT & SOCIALS.</h2></div>
-<div class="g2c">
-<div class="ctc"><h3 style="margin-bottom:10px">Direct Coaching Support</h3><p class="sub-t" style="margin-bottom:8px"><strong>💬 WhatsApp & Call:</strong> <a href="tel:+916394313576" style="color:var(--gl);text-decoration:none">+91 63943 13576</a></p><p class="sub-t" style="margin-bottom:14px"><strong>📧 Email:</strong> <a href="mailto:unstoppablesahib@gmail.com" style="color:var(--gl);text-decoration:none">unstoppablesahib@gmail.com</a></p><div class="btns"><a class="btn" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20have%20a%20question%20about%20online%20coaching.">MESSAGE ON WHATSAPP →</a><a class="bo" href="tel:+916394313576">CALL NOW</a></div></div>
-<div class="ctc"><h3 style="margin-bottom:10px">Follow on Instagram</h3><p style="color:var(--m);font-size:13px;margin-bottom:14px">Check out daily workout tips, client transformations, and training reels on Instagram.</p><div class="btns"><a class="btn" href="https://www.instagram.com/trainedbysahib_" target="_blank">@TRAINEDBYSAHIB_ →</a><a class="bo" href="https://www.instagram.com/heyysahibb?hvrq=NHc1Y3J4bTRzOGwy" target="_blank">@HEYYSAHIBB →</a></div></div>
-</div></div>
+<!-- 2. GUARANTEED TRANSFORMATION SECTION -->
+<section>
+<div class="guar-box">
+<div class="pill">100% PERSONALIZED COACHING SYSTEM</div>
+<h2>GUARANTEED <span>TRANSFORMATION</span><br>IF YOU GUARANTEE YOUR COMMITMENT</h2>
+<p class="sub-p" style="margin-top:14px">No copy-paste PDFs. No starvation diets. Get customized Indian home-meal nutrition charts, progressive hypertrophy & strength workouts, and direct 1-on-1 WhatsApp accountability from Sahib Khan.</p>
+<a href="#apply" class="cta">YES, I'M READY! →</a>
+</div>
+</section>
 
-<footer><strong style="color:#fde047">TRAINED BY SAHIB</strong> • Online Personal Training & Transformation<br><span>WhatsApp: +91 63943 13576 • Email: unstoppablesahib@gmail.com</span><br><small>© 2026 TRAINED BY SAHIB. ALL RIGHTS RESERVED.</small></footer>
-<a class="wa" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20start%20online%20coaching.">💬 WhatsApp</a>
+<div class="div-line"></div>
+
+<!-- 3. PROVEN TRANSFORMATIONS & CLIENT RESULTS -->
+<section>
+<div class="pill">REAL PEOPLE • REAL RESULTS</div>
+<h2>PROVEN <span>TRANSFORMATIONS.</span><br>RESULTS THAT SPEAK FOR THEMSELVES.</h2>
+<p class="sub-p">From stubborn belly fat loss to lean muscle gain and raw powerlifting strength—every plan is built around your body type, budget, and daily schedule.</p>
+
+<div class="res-grid">
+<div class="res-card">
+<div class="res-tag">Fat Loss & Shred</div>
+<h3 style="font-size:20px;margin-bottom:6px">-12 KG IN 12 WEEKS</h3>
+<p style="color:var(--m);font-size:13.5px">Sustainable calorie-deficit Indian diet with high-protein home meals and structured fat-burn workouts.</p>
+</div>
+<div class="res-card">
+<div class="res-tag">Lean Bulk & Size</div>
+<h3 style="font-size:20px;margin-bottom:6px">+7 KG LEAN MUSCLE</h3>
+<p style="color:var(--m);font-size:13.5px">Progressive Push-Pull-Legs hypertrophy programming with exact macro targets for skinny-to-muscular transformations.</p>
+</div>
+<div class="res-card">
+<div class="res-tag">Strength & Power</div>
+<h3 style="font-size:20px;margin-bottom:6px">PEAK SBD PERFORMANCE</h3>
+<p style="color:var(--m);font-size:13.5px">Squat, Bench Press, and Deadlift technique mastery with injury-free form correction and strength peaking.</p>
+</div>
+</div>
+
+<a href="#apply" class="cta">YES, I'M READY! →</a>
+</section>
+
+<div class="div-line"></div>
+<!-- 4. WHAT YOU GET INSIDE COACHING -->
+<section>
+<div class="pill">THE ELITE COACHING BLUEPRINT</div>
+<h2>EVERYTHING YOU NEED TO <span>TRANSFORM</span></h2>
+<div class="g3">
+<div class="card">
+<h3>🥗 Custom Indian Diet Plan</h3>
+<p>100% tailored around your regular home food (roti, rice, paneer, eggs, chicken, soya, oats) with exact calorie & protein targets.</p>
+</div>
+<div class="card">
+<h3>🏋️ Tailored Workout Split</h3>
+<p>Goal-specific training plan (Gym or Home) designed for maximum muscle hypertrophy, fat loss, and progressive overload.</p>
+</div>
+<div class="card">
+<h3>📲 Weekly Check-Ins & Form Review</h3>
+<p>Direct WhatsApp support with Sahib Khan—weekly physique & weight tracking, diet adjustments, and exercise video form checks.</p>
+</div>
+</div>
+<a href="#apply" class="cta">YES, I'M READY! →</a>
+</section>
+
+<div class="div-line"></div>
+
+<!-- 5. MEET YOUR COACH -->
+<section>
+<div class="coach-wrap">
+<img src="Coach.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Coach.jpg';}else{this.style.display='none';}" alt="Sahib Khan">
+<div>
+<div class="pill">YOUR HEAD COACH</div>
+<h2 style="font-size:32px;margin-bottom:6px">SAHIB <span>KHAN</span></h2>
+<p style="color:var(--g1);font-weight:800;font-size:14px">American Council on Exercise (ACE) Certified • 5 Years Experience</p>
+<div class="badges">
+<span>Body Transformation Specialist</span>
+<span>Custom Diet & Workout</span>
+<span>Powerlifting & Hypertrophy</span>
+</div>
+<p style="color:var(--sub);font-size:14.5px;margin-bottom:18px">Whether your goal is dropping stubborn body fat, building an aesthetic muscular physique, or boosting your strength numbers—I build a step-by-step system tailored specifically for you.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="#apply" class="cta" style="padding:13px 24px;font-size:13px">START YOUR TRANSFORMATION →</a>
+<a href="https://www.instagram.com/heyysahibb?hvrq=NHc1Y3J4bTRzOGwy" target="_blank" style="border:2px solid var(--g1);color:var(--g1);padding:11px 20px;border-radius:6px;font-weight:900;font-size:13px;text-decoration:none;text-transform:uppercase">INSTAGRAM (@heyysahibb)</a>
+</div>
+</div>
+</div>
+</section>
+
+<div class="div-line"></div>
+
+<!-- 6. COACHING APPLICATION FORM (DIRECT WHATSAPP) -->
+<section id="apply">
+<div class="pill">LIMITED 1-ON-1 SLOTS AVAILABLE</div>
+<h2>APPLY FOR <span>1-ON-1 COACHING</span></h2>
+<p class="sub-p">Fill out your details below to send your coaching application directly to Sahib Khan on WhatsApp.</p>
+
+<div class="form-box">
+<label>Your Full Name *</label>
+<input type="text" id="cName" placeholder="Enter your full name">
+
+<label>WhatsApp Number *</label>
+<input type="tel" id="cPhone" placeholder="Enter your 10-digit WhatsApp number">
+
+<label>Age, Weight (KG) & Height (CM) *</label>
+<input type="text" id="cStats" placeholder="e.g. 22 yrs, 72 kg, 170 cm">
+
+<label>Primary Transformation Goal *</label>
+<select id="cGoal">
+<option>Fat To Fit / Weight Loss</option>
+<option>Lean Muscle Gain / Bulking</option>
+<option>Body Recomposition (Fat Loss + Muscle Gain)</option>
+<option>Strength & Powerlifting Coaching</option>
+<option>Customized Diet Plan Only</option>
+</select>
+
+<label>Coaching Mode *</label>
+<select id="cMode">
+<option>Online 1-on-1 Coaching (Anywhere in India / Worldwide)</option>
+<option>Offline Personal Training (RR Fitness Gym, Baruasagar)</option>
+</select>
+
+<label>Anything Else About Your Routine or Injuries?</label>
+<textarea id="cMsg" rows="3" placeholder="Tell me about your current workout experience, veg/non-veg preference, or target timeline..."></textarea>
+
+<button class="cta" style="width:100%;font-size:16px" onclick="applyNow()">YES, I'M READY! SEND APPLICATION →</button>
+</div>
+</section>
+
+<footer>
+<strong style="color:#fff;letter-spacing:2px;font-size:15px">TRAINED BY <span style="color:var(--g1)">SAHIB</span></strong><br>
+<span>ACE Certified Personal Trainer & Body Transformation Coach</span><br>
+<div style="margin:10px 0">
+📞 WhatsApp / Call: <a href="tel:+916394313576">+91 63943 13576</a> &nbsp;•&nbsp;
+📸 Instagram: <a href="https://www.instagram.com/heyysahibb?hvrq=NHc1Y3J4bTRzOGwy" target="_blank">@heyysahibb</a> &amp; <a href="https://www.instagram.com/unstoppablesahib" target="_blank">@unstoppablesahib</a>
+</div>
+<small>© 2026 TRAINED BY SAHIB. ALL RIGHTS RESERVED.</small>
+</footer>
 
 <script>
-function openPage(id){var p=document.querySelectorAll('.page'),b=document.querySelectorAll('.m-btn');for(var i=0;i<p.length;i++)p[i].classList.remove('act');for(var j=0;j<b.length;j++)b[j].classList.remove('act');document.getElementById('p-'+id).classList.add('act');var btn=document.getElementById('b-'+id);if(btn)btn.classList.add('act');window.scrollTo(0,0)}
-function sendEnq(){var n=eN.value||"Client",p=eP.value||"Not given",w=eW.value||"Not given",m=eM.value,g=eG.value||"Transformation";window.open("https://wa.me/916394313576?text="+encodeURIComponent("New Coaching Inquiry (Trained By Sahib):\nName: "+n+"\nPhone: "+p+"\nStats: "+w+"\nPackage: "+m+"\nGoal: "+g),"_blank")}
-function addReview(){var n=rName.value.trim(),s=rStar.value,g=rGoal.value.trim()||"Coaching Client",t=rText.value.trim();if(!n||!t){alert("Please enter your name and review.");return}var box=document.createElement("div");box.className="rv";box.innerHTML='<div style="color:var(--gl);margin-bottom:6px">'+s+'</div><p class="sub-t" style="font-size:13px;margin-bottom:10px">"'+t.replace(/</g,"&lt;")+'"</p><strong>'+n.replace(/</g,"&lt;")+'</strong><br><small style="color:var(--gd)">'+g.replace(/</g,"&lt;")+'</small>';document.getElementById("revList").prepend(box);rName.value="";rGoal.value="";rText.value="";alert("Thank you! Your review has been posted.")}
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js');}
+function applyNow(){
+  var n=document.getElementById('cName').value.trim();
+  var p=document.getElementById('cPhone').value.trim();
+  var s=document.getElementById('cStats').value.trim()||"Not mentioned";
+  var g=document.getElementById('cGoal').value;
+  var m=document.getElementById('cMode').value;
+  var msg=document.getElementById('cMsg').value.trim()||"None";
+  if(!n||!p){alert("Please enter your Name and WhatsApp Number.");return;}
+  var txt="🔥 *NEW COACHING APPLICATION — TRAINED BY SAHIB*\n\n"+
+          "👤 *Name:* "+n+"\n"+
+          "📞 *WhatsApp:* "+p+"\n"+
+          "📊 *Stats:* "+s+"\n"+
+          "🎯 *Goal:* "+g+"\n"+
+          "🏋️ *Mode:* "+m+"\n"+
+          "📝 *Notes:* "+msg;
+  window.open("https://wa.me/916394313576?text="+encodeURIComponent(txt),"_blank");
+}
 </script>
 </body>
 </html>
