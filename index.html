@@ -4,62 +4,74 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#09090b">
 <title>TRAINED BY SAHIB | Elite Online & Offline Body Transformation Coaching</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#09090b;--bg2:#121216;--card:#16161b;--ink:#ffffff;--sub:#d4d4d8;--m:#a1a1aa;--g1:#eab308;--g2:#f59e0b;--red:#ef4444;--grad:linear-gradient(135deg,#f59e0b,#d97706,#b45309);--bd:rgba(234,179,8,0.28);--sh:0 16px 40px rgba(0,0,0,0.65)}
+*{margin:0;padding:0;box-sizing:border-box;transition:background-color .35s,color .35s,border-color .35s}
+:root{--bg:#09090b;--bg2:#121216;--card:#16161b;--hdr:rgba(9,9,11,0.96);--ink:#ffffff;--sub:#d4d4d8;--m:#a1a1aa;--g1:#eab308;--g2:#f59e0b;--grad:linear-gradient(135deg,#f59e0b,#d97706,#b45309);--bd:rgba(234,179,8,0.28);--sh:0 16px 40px rgba(0,0,0,0.65);--guar:linear-gradient(135deg,#18181f 0%,#0f0f13 100%)}
+body.day{--bg:#fbf8f2;--bg2:#f3ecde;--card:#ffffff;--hdr:rgba(251,248,242,0.96);--ink:#141210;--sub:#3f3a34;--m:#78716c;--g1:#b45309;--g2:#d97706;--grad:linear-gradient(135deg,#f59e0b,#d97706,#92400e);--bd:rgba(180,83,9,0.28);--sh:0 12px 30px rgba(20,18,16,0.08);--guar:linear-gradient(135deg,#ffffff 0%,#f5ecd8 100%)}
 html{scroll-behavior:smooth}
 body{font-family:'Arial Black',Impact,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.5}
 .sans{font-family:'Segoe UI',Arial,sans-serif}
-/* CENTERED TOP LOGO HEADER */
-header{background:rgba(9,9,11,0.96);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--bd);padding:16px 5%;text-align:center;position:sticky;top:0;z-index:50}
-.logo-center{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:var(--ink);gap:6px}
+header{background:var(--hdr);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--bd);padding:14px 5%;text-align:center;position:sticky;top:0;z-index:50}
+.logo-center{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:var(--ink);gap:5px}
 .logo-center img{height:58px;width:auto;object-fit:contain;display:block;margin:0 auto}
+body.day .logo-center img{filter:invert(1) hue-rotate(180deg)}
 .logo-txt{font-size:18px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase}.logo-txt span{color:var(--g1)}
-/* SECTIONS & TYPOGRAPHY */
-section{padding:56px 5%;max-width:1040px;margin:0 auto;text-align:center}
-.pill{display:inline-block;background:rgba(234,179,8,0.12);border:1px solid var(--bd);color:var(--g1);font-size:11.5px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;padding:6px 14px;border-radius:4px;margin-bottom:16px}
+.quick-nav{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px}
+.quick-nav a{color:var(--sub);font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none}
+.quick-nav a:hover{color:var(--g1)}
+.th-btn{background:var(--card);border:1px solid var(--bd);color:var(--g1);font-size:10.5px;font-weight:800;padding:4px 10px;border-radius:20px;cursor:pointer;text-transform:uppercase}
+section{padding:54px 5%;max-width:1060px;margin:0 auto;text-align:center}
+.pill{display:inline-block;background:rgba(234,179,8,0.14);border:1px solid var(--bd);color:var(--g1);font-size:11.5px;font-weight:900;letter-spacing:2.2px;text-transform:uppercase;padding:6px 14px;border-radius:4px;margin-bottom:16px}
 h1{font-size:clamp(34px,6.5vw,64px);font-weight:900;line-height:1.03;text-transform:uppercase;letter-spacing:-.5px;margin-bottom:14px}
 h1 span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .pillars{font-size:clamp(12px,2vw,15px);font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:var(--g1);margin:14px 0 26px}
-.cta{display:inline-block;background:var(--grad);color:#09090b;padding:16px 34px;border-radius:6px;font-weight:900;font-size:15px;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:.25s;box-shadow:0 8px 28px rgba(245,158,11,0.38)}
-.cta:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 36px rgba(245,158,11,0.55)}
+.cta{display:inline-block;background:var(--grad);color:#fff;padding:16px 34px;border-radius:6px;font-weight:900;font-size:15px;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;box-shadow:0 8px 28px rgba(245,158,11,0.35)}
+.cta:hover{transform:translateY(-3px) scale(1.02)}
 .hero-media{max-width:460px;margin:34px auto 0;border-radius:12px;overflow:hidden;border:2px solid var(--g1);box-shadow:var(--sh);background:var(--card)}
 .hero-media img{width:100%;height:auto;display:block}
-.div-line{height:1px;background:linear-gradient(90deg,transparent,var(--bd),transparent);max-width:900px;margin:0 auto}
-h2{font-size:clamp(28px,5vw,48px);font-weight:900;line-height:1.08;text-transform:uppercase;margin-bottom:12px}
+.div-line{height:1px;background:linear-gradient(90deg,transparent,var(--bd),transparent);max-width:920px;margin:0 auto}
+h2{font-size:clamp(28px,5vw,46px);font-weight:900;line-height:1.08;text-transform:uppercase;margin-bottom:12px}
 h2 span{color:var(--g1)}
 .sub-p{color:var(--sub);font-size:15.5px;max-width:680px;margin:0 auto 28px}
-/* GUARANTEE BANNER */
-.guar-box{background:linear-gradient(135deg,#18181f 0%,#0f0f13 100%);border:2px solid var(--g1);border-radius:14px;padding:42px 24px;box-shadow:var(--sh)}
-/* CARDS & GRIDS */
+.guar-box{background:var(--guar);border:2px solid var(--g1);border-radius:14px;padding:42px 24px;box-shadow:var(--sh)}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left;margin:30px 0}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:22px;text-align:left;margin:30px 0}
 .card{background:var(--card);border:1.5px solid var(--bd);border-top:4px solid var(--g1);border-radius:10px;padding:26px;box-shadow:var(--sh)}
 .card h3{font-size:19px;font-weight:900;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
 .card p{color:var(--sub);font-size:14px}
-/* TRANSFORMATION PROOF GRID */
+/* FULL-FRAME PHOTO GALLERY */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start;margin:28px 0}
+.gal img{width:100%;height:auto;border-radius:10px;border:2px solid var(--bd);display:block;box-shadow:var(--sh);transition:transform .3s,border-color .3s}
+.gal img:hover{transform:scale(1.02);border-color:var(--g1)}
 .res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
-.res-card{background:var(--card);border:1.5px solid var(--bd);border-radius:10px;padding:20px;text-align:center}
-.res-tag{display:inline-block;background:var(--g1);color:#09090b;font-size:11px;font-weight:900;padding:4px 10px;border-radius:4px;text-transform:uppercase;margin-bottom:10px}
+.res-card{background:var(--card);border:1.5px solid var(--bd);border-radius:10px;padding:20px;text-align:center;box-shadow:var(--sh)}
+.res-tag{display:inline-block;background:var(--g1);color:#fff;font-size:11px;font-weight:900;padding:4px 10px;border-radius:4px;text-transform:uppercase;margin-bottom:10px}
 /* COACH SECTION */
 .coach-wrap{background:var(--card);border:2px solid var(--bd);border-radius:14px;padding:34px 26px;display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:center;text-align:left;box-shadow:var(--sh)}
 .coach-wrap img{width:100%;height:auto;border-radius:10px;border:2px solid var(--g1);display:block;margin:0 auto}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}.badges span{background:rgba(234,179,8,0.12);border:1px solid var(--bd);color:var(--g1);font-size:11px;font-weight:800;padding:5px 10px;border-radius:4px;text-transform:uppercase}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}.badges span{background:rgba(234,179,8,0.14);border:1px solid var(--bd);color:var(--g1);font-size:11px;font-weight:800;padding:5px 10px;border-radius:4px;text-transform:uppercase}
 /* APPLICATION FORM */
 .form-box{max-width:620px;margin:0 auto;background:var(--card);border:2px solid var(--g1);border-radius:14px;padding:32px 24px;text-align:left;box-shadow:var(--sh)}
 label{display:block;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--g1);margin-bottom:6px}
 input,select,textarea{width:100%;padding:13px 14px;margin-bottom:16px;background:var(--bg);border:1.5px solid var(--bd);border-radius:6px;color:var(--ink);font-size:14px}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--g1)}
-footer{background:#050507;color:var(--m);text-align:center;padding:34px 5% 50px;font-size:13px;border-top:1.5px solid var(--bd)}footer a{color:var(--g1);text-decoration:none;font-weight:700}
-@media(max-width:850px){.g3,.g2,.res-grid,.coach-wrap{grid-template-columns:1fr}.coach-wrap{text-align:center}.badges{justify-content:center}}
+footer{background:#09090b;color:#a1a1aa;text-align:center;padding:34px 5% 50px;font-size:13px;border-top:2px solid var(--g1)}footer a{color:#eab308;text-decoration:none;font-weight:700}
+@media(max-width:850px){.g3,.res-grid,.coach-wrap,.gal{grid-template-columns:1fr}.coach-wrap{text-align:center}.badges{justify-content:center}}
 </style>
 </head>
 <body class="sans">
-<!-- CENTERED LOGO HEADER (LIKE SHREDDED KRISHNA) -->
+<!-- CENTERED LOGO HEADER + AUTO DAY/NIGHT THEME -->
 <header>
 <a href="#top" class="logo-center">
 <img src="Logo.png" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Logo.PNG';}else{this.style.display='none';}" alt="Trained By Sahib Logo">
 <div class="logo-txt">TRAINED BY <span>SAHIB</span></div>
 </a>
+<div class="quick-nav">
+<a href="#results">Transformations</a>
+<a href="#gallery">Gallery</a>
+<a href="#blueprint">Coaching</a>
+<a href="#coach">Coach</a>
+<a href="#apply">Apply Now</a>
+<button class="th-btn" id="thBtn" onclick="toggleTheme()">🌙 Auto Theme</button>
+</div>
 </header>
 
 <!-- 1. HERO FUNNEL SECTION -->
@@ -91,8 +103,8 @@ footer{background:#050507;color:var(--m);text-align:center;padding:34px 5% 50px;
 
 <div class="div-line"></div>
 
-<!-- 3. PROVEN TRANSFORMATIONS & CLIENT RESULTS -->
-<section>
+<!-- 3. PROVEN TRANSFORMATIONS & FULL-FRAME PHOTO GALLERY -->
+<section id="results">
 <div class="pill">REAL PEOPLE • REAL RESULTS</div>
 <h2>PROVEN <span>TRANSFORMATIONS.</span><br>RESULTS THAT SPEAK FOR THEMSELVES.</h2>
 <p class="sub-p">From stubborn belly fat loss to lean muscle gain and raw powerlifting strength—every plan is built around your body type, budget, and daily schedule.</p>
@@ -115,12 +127,28 @@ footer{background:#050507;color:var(--m);text-align:center;padding:34px 5% 50px;
 </div>
 </div>
 
+<!-- PHOTO GALLERY (FULL FRAME) -->
+<div id="gallery" style="margin-top:44px">
+<div class="pill">PHYSIQUE & CLIENT GALLERY</div>
+<h2>PHOTO <span>GALLERY</span></h2>
+<div class="gal">
+<img src="Photo%201.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Photo%201.jpg';}else{this.style.display='none';}" alt="Gallery 1">
+<img src="Photo%202.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Photo%202.jpg';}else{this.style.display='none';}" alt="Gallery 2">
+<img src="Photo%203.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Photo%203.jpg';}else{this.style.display='none';}" alt="Gallery 3">
+<img src="Photo%204.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Photo%204.jpg';}else{this.style.display='none';}" alt="Gallery 4">
+<img src="Photo%205.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Photo%205.jpg';}else{this.style.display='none';}" alt="Gallery 5">
+<img src="Photo%206.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Photo%206.jpg';}else{this.style.display='none';}" alt="Gallery 6">
+<img src="Gym%201.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Gym%201.jpg';}else{this.style.display='none';}" alt="Gallery 7">
+<img src="Gym%202.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Gym%202.jpg';}else{this.style.display='none';}" alt="Gallery 8">
+</div>
+</div>
+
 <a href="#apply" class="cta">YES, I'M READY! →</a>
 </section>
 
 <div class="div-line"></div>
 <!-- 4. WHAT YOU GET INSIDE COACHING -->
-<section>
+<section id="blueprint">
 <div class="pill">THE ELITE COACHING BLUEPRINT</div>
 <h2>EVERYTHING YOU NEED TO <span>TRANSFORM</span></h2>
 <div class="g3">
@@ -143,7 +171,7 @@ footer{background:#050507;color:var(--m);text-align:center;padding:34px 5% 50px;
 <div class="div-line"></div>
 
 <!-- 5. MEET YOUR COACH -->
-<section>
+<section id="coach">
 <div class="coach-wrap">
 <img src="Coach.JPG" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='Coach.jpg';}else{this.style.display='none';}" alt="Sahib Khan">
 <div>
@@ -156,9 +184,10 @@ footer{background:#050507;color:var(--m);text-align:center;padding:34px 5% 50px;
 <span>Powerlifting & Hypertrophy</span>
 </div>
 <p style="color:var(--sub);font-size:14.5px;margin-bottom:18px">Whether your goal is dropping stubborn body fat, building an aesthetic muscular physique, or boosting your strength numbers—I build a step-by-step system tailored specifically for you.</p>
-<div style="display:flex;gap:12px;flex-wrap:wrap">
-<a href="#apply" class="cta" style="padding:13px 24px;font-size:13px">START YOUR TRANSFORMATION →</a>
-<a href="https://www.instagram.com/heyysahibb?hvrq=NHc1Y3J4bTRzOGwy" target="_blank" style="border:2px solid var(--g1);color:var(--g1);padding:11px 20px;border-radius:6px;font-weight:900;font-size:13px;text-decoration:none;text-transform:uppercase">INSTAGRAM (@heyysahibb)</a>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<a href="#apply" class="cta" style="padding:12px 20px;font-size:12.5px">START YOUR TRANSFORMATION →</a>
+<a href="https://www.instagram.com/trainedbysahib_" target="_blank" style="border:2px solid var(--g1);color:var(--g1);padding:10px 16px;border-radius:6px;font-weight:900;font-size:12.5px;text-decoration:none;text-transform:uppercase">📸 @trainedbysahib_</a>
+<a href="https://www.instagram.com/heyysahibb?hvrq=NHc1Y3J4bTRzOGwy" target="_blank" style="border:1.5px solid var(--bd);color:var(--sub);padding:10px 16px;border-radius:6px;font-weight:800;font-size:12.5px;text-decoration:none;text-transform:uppercase">@heyysahibb</a>
 </div>
 </div>
 </div>
@@ -205,16 +234,29 @@ footer{background:#050507;color:var(--m);text-align:center;padding:34px 5% 50px;
 </section>
 
 <footer>
-<strong style="color:#fff;letter-spacing:2px;font-size:15px">TRAINED BY <span style="color:var(--g1)">SAHIB</span></strong><br>
+<strong style="color:#fff;letter-spacing:2px;font-size:15px">TRAINED BY <span style="color:#eab308">SAHIB</span></strong><br>
 <span>ACE Certified Personal Trainer & Body Transformation Coach</span><br>
 <div style="margin:10px 0">
 📞 WhatsApp / Call: <a href="tel:+916394313576">+91 63943 13576</a> &nbsp;•&nbsp;
-📸 Instagram: <a href="https://www.instagram.com/heyysahibb?hvrq=NHc1Y3J4bTRzOGwy" target="_blank">@heyysahibb</a> &amp; <a href="https://www.instagram.com/unstoppablesahib" target="_blank">@unstoppablesahib</a>
+📸 Coaching IG: <a href="https://www.instagram.com/trainedbysahib_" target="_blank">@trainedbysahib_</a> &nbsp;•&nbsp;
+📸 Personal IG: <a href="https://www.instagram.com/heyysahibb?hvrq=NHc1Y3J4bTRzOGwy" target="_blank">@heyysahibb</a>
 </div>
 <small>© 2026 TRAINED BY SAHIB. ALL RIGHTS RESERVED.</small>
 </footer>
 
 <script>
+function setAutoTheme(){
+  var hr=new Date().getHours();
+  var isDay=(hr>=6 && hr<18);
+  document.body.classList.toggle('day',isDay);
+  document.getElementById('thBtn').innerText=isDay?'☀️ Day Mode':'🌙 Night Mode';
+}
+function toggleTheme(){
+  var isDay=document.body.classList.toggle('day');
+  document.getElementById('thBtn').innerText=isDay?'☀️ Day Mode':'🌙 Night Mode';
+}
+setAutoTheme();
+
 function applyNow(){
   var n=document.getElementById('cName').value.trim();
   var p=document.getElementById('cPhone').value.trim();
